@@ -1,0 +1,109 @@
+{
+  "scenario": "points_expiring_tomorrow",
+  "session_id": "S-c49b4e7748",
+  "guardrails": "strict",
+  "turns": [
+    {
+      "customer": "How many SkyPoints do I have?",
+      "aria_turn_record": {
+        "reply": "I can check that for you. First I need to confirm your account. Could you share the phone number, email or SkyPoints number registered with us? I'll send a one-time code to the contact we have on file.",
+        "intent": "loyalty",
+        "skill": "loyalty",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "LY-1",
+          "ID-3"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "It's +919510626148.",
+      "aria_turn_record": {
+        "reply": "Thanks. I've sent a 6-digit code by SMS to the mobile number on file ending ••148. It's valid for 10 minutes. Please type it here when it arrives.",
+        "intent": "loyalty",
+        "skill": "verify_identity",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ID-3",
+          "ID-6",
+          "ID-8",
+          "PV-2"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": [
+        "lookup_customer",
+        "send_otp"
+      ]
+    },
+    {
+      "customer": "442299",
+      "aria_turn_record": {
+        "reply": "Thanks, Sunita, you're verified. You have **84,047 SkyPoints**, worth ₹42,023.50, and you're a Silver member. Heads up: 4,200 points expire tomorrow, 7 Oct, and another 2,356 expire on 31 Oct. You're also 2,248 points away from Gold. Anything else I can help with?",
+        "intent": "loyalty",
+        "skill": "loyalty",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ID-3",
+          "LY-1",
+          "LY-5",
+          "LY-3",
+          "CM-4"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "loyalty_balance",
+          "data": {
+            "points_balance": 84047,
+            "value_inr": 42023.5,
+            "tier": "SILVER",
+            "expiring_30_days": [
+              {
+                "expires_on": "2026-10-07",
+                "points": 4200
+              },
+              {
+                "expires_on": "2026-10-31",
+                "points": 2356
+              }
+            ],
+            "points_to_next_tier": 2248
+          }
+        }
+      },
+      "tools_called": [
+        "verify_otp",
+        "loyalty_balance"
+      ]
+    },
+    {
+      "customer": "No, that's all, thanks.",
+      "aria_turn_record": {
+        "reply": "You're welcome, Sunita. Just a reminder that 4,200 of your points expire tomorrow. Have a great day!",
+        "intent": "other",
+        "skill": "loyalty",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "LY-5",
+          "CM-10"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": []
+    }
+  ]
+}

@@ -1,0 +1,492 @@
+{
+  "_comment": "Single source of truth for every number in SkyPilot policy. Tools compute fees, refunds and allowances from this file. Policy markdown quotes the same values. Change a number here and in the matching policy file together.",
+  "airline": "SkyPilot Air",
+  "currency": "INR",
+  "sim_now": "2026-10-06T10:00:00+05:30",
+  "fare_families": {
+    "BASIC": {
+      "cabin": "economy",
+      "price_factor": 1.0,
+      "change": {
+        "allowed": false
+      },
+      "cancel": {
+        "refundable": false,
+        "refund": "taxes_only"
+      },
+      "no_show": {
+        "refund": "taxes_only"
+      },
+      "checked_bag_kg": {
+        "domestic": 15,
+        "international": 20
+      },
+      "checked_bag_pieces": 1,
+      "cabin_bags": 1,
+      "seat_selection": "paid",
+      "meal": "paid",
+      "points_multiplier": 0.5
+    },
+    "STANDARD": {
+      "cabin": "economy",
+      "price_factor": 1.18,
+      "change": {
+        "allowed": true,
+        "fee": {
+          "domestic": 3000,
+          "international": 5000
+        }
+      },
+      "cancel": {
+        "refundable": true,
+        "fee": {
+          "domestic": 3500,
+          "international": 6000
+        }
+      },
+      "no_show": {
+        "refund": "taxes_only"
+      },
+      "checked_bag_kg": {
+        "domestic": 15,
+        "international": 25
+      },
+      "checked_bag_pieces": 1,
+      "cabin_bags": 1,
+      "seat_selection": "standard_free",
+      "meal": "free_international_only",
+      "points_multiplier": 1.0
+    },
+    "FLEX": {
+      "cabin": "economy",
+      "price_factor": 1.55,
+      "change": {
+        "allowed": true,
+        "fee": {
+          "domestic": 0,
+          "international": 0
+        }
+      },
+      "cancel": {
+        "refundable": true,
+        "fee": {
+          "domestic": 0,
+          "international": 0
+        },
+        "late_fee_within_hours": 24,
+        "late_fee": {
+          "domestic": 1500,
+          "international": 3000
+        }
+      },
+      "no_show": {
+        "refund": "fare_minus_fee",
+        "fee": {
+          "domestic": 3000,
+          "international": 5000
+        }
+      },
+      "checked_bag_kg": {
+        "domestic": 20,
+        "international": 30
+      },
+      "checked_bag_pieces": 1,
+      "cabin_bags": 1,
+      "seat_selection": "all_free_except_exit",
+      "meal": "free",
+      "points_multiplier": 1.5
+    },
+    "BUSINESS": {
+      "cabin": "business",
+      "price_factor": 3.2,
+      "change": {
+        "allowed": true,
+        "fee": {
+          "domestic": 0,
+          "international": 0
+        }
+      },
+      "cancel": {
+        "refundable": true,
+        "fee": {
+          "domestic": 2000,
+          "international": 4000
+        }
+      },
+      "no_show": {
+        "refund": "fare_minus_fee",
+        "fee": {
+          "domestic": 3000,
+          "international": 5000
+        }
+      },
+      "checked_bag_kg": {
+        "domestic": 30,
+        "international": 40
+      },
+      "checked_bag_pieces": 2,
+      "cabin_bags": 2,
+      "seat_selection": "all_free",
+      "meal": "free",
+      "lounge": true,
+      "points_multiplier": 2.0
+    }
+  },
+  "fees_apply": "per passenger, per flight segment",
+  "fare_difference": {
+    "higher_new_fare": "customer pays the difference in base fare and taxes",
+    "lower_new_fare": {
+      "BASIC": "not applicable",
+      "STANDARD": "no refund of the difference",
+      "FLEX": "difference credited to SkyWallet",
+      "BUSINESS": "difference credited to SkyWallet"
+    }
+  },
+  "look_in_option": {
+    "window_hours_after_booking": 24,
+    "min_days_before_departure": {
+      "domestic": 7,
+      "international": 15
+    },
+    "change_fee": 0,
+    "cancel_fee": 0,
+    "fare_difference_still_applies": true,
+    "applies_to_fare_families": [
+      "BASIC",
+      "STANDARD",
+      "FLEX",
+      "BUSINESS"
+    ]
+  },
+  "service_cutoffs_hours_before_departure": {
+    "new_booking": {
+      "domestic": 3,
+      "international": 4
+    },
+    "change_or_cancel": {
+      "domestic": 3,
+      "international": 4
+    },
+    "prepaid_baggage": {
+      "domestic": 4,
+      "international": 4
+    },
+    "seat_selection": {
+      "domestic": 2,
+      "international": 2
+    },
+    "special_assistance_guaranteed": {
+      "domestic": 48,
+      "international": 48
+    }
+  },
+  "refund": {
+    "components": "base_fare + taxes, minus cancellation fee, never below taxes",
+    "ancillaries_on_voluntary_cancel": "non-refundable (seats, meals); prepaid bags refundable if cancelled more than 24 hours before departure",
+    "ancillaries_on_airline_cancel": "fully refundable",
+    "methods": {
+      "original_payment": true,
+      "skywallet_instant": true
+    },
+    "timeline_business_days": {
+      "card": 7,
+      "upi": 5,
+      "netbanking": 7,
+      "skywallet": 0
+    },
+    "overdue_after_business_days": 10,
+    "overdue_rule": "a refund not completed within 10 business days of initiation is overdue"
+  },
+  "disruptions": {
+    "meal_voucher": {
+      "min_delay_minutes": 120,
+      "amount": {
+        "domestic": 300,
+        "international": 600
+      }
+    },
+    "free_rebook_or_refund": {
+      "airline_cancellation": true,
+      "delay_minutes_at_least": 360,
+      "schedule_change_minutes_at_least": 120
+    },
+    "rebook_window_days": 3,
+    "refund_on_disruption": "full amount including ancillaries, to original payment or SkyWallet",
+    "compensation_domestic": {
+      "applies_if_notified_hours_before_departure_less_than": 24,
+      "only_for_reasons": [
+        "technical",
+        "crew",
+        "operational"
+      ],
+      "excluded_reasons": [
+        "weather",
+        "atc",
+        "security"
+      ],
+      "by_block_time_minutes": [
+        {
+          "max_minutes": 60,
+          "amount": 5000
+        },
+        {
+          "max_minutes": 120,
+          "amount": 7500
+        },
+        {
+          "max_minutes": 100000,
+          "amount": 10000
+        }
+      ],
+      "not_payable_if_customer_accepts_rebooking_departing_within_hours": 2
+    },
+    "compensation_international": "handoff_to_human"
+  },
+  "name_correction": {
+    "free_max_characters_changed": 3,
+    "first_last_swap_free": true,
+    "full_name_change_allowed": false,
+    "allowed_until_hours_before_departure": 3
+  },
+  "seats": {
+    "types": {
+      "standard": {
+        "price": {
+          "domestic": 300,
+          "international": 600
+        }
+      },
+      "preferred": {
+        "rows": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "price": {
+          "domestic": 800,
+          "international": 1500
+        }
+      },
+      "exit_row": {
+        "price": {
+          "domestic": 1200,
+          "international": 2000
+        },
+        "restrictions": [
+          "age 15 or over",
+          "no infant",
+          "able and willing to assist in an evacuation",
+          "no special assistance request"
+        ]
+      }
+    },
+    "free_for": {
+      "STANDARD": [
+        "standard"
+      ],
+      "FLEX": [
+        "standard",
+        "preferred"
+      ],
+      "BUSINESS": [
+        "standard",
+        "preferred",
+        "exit_row"
+      ],
+      "tier_GOLD": [
+        "standard",
+        "preferred"
+      ],
+      "tier_PLATINUM": [
+        "standard",
+        "preferred",
+        "exit_row"
+      ]
+    },
+    "refundable": false
+  },
+  "baggage": {
+    "cabin": {
+      "pieces": 1,
+      "max_kg": 7,
+      "dimensions_cm": "55 x 35 x 25",
+      "personal_item_kg": 3
+    },
+    "loyalty_bonus_kg": {
+      "BLUE": 0,
+      "SILVER": 5,
+      "GOLD": 10,
+      "PLATINUM": 15
+    },
+    "prepaid_packs": {
+      "domestic": [
+        {
+          "kg": 5,
+          "price": 2500
+        },
+        {
+          "kg": 10,
+          "price": 4800
+        },
+        {
+          "kg": 15,
+          "price": 7000
+        }
+      ],
+      "international": [
+        {
+          "kg": 5,
+          "price": 4000
+        },
+        {
+          "kg": 10,
+          "price": 7500
+        },
+        {
+          "kg": 15,
+          "price": 10500
+        }
+      ]
+    },
+    "airport_excess_per_kg": {
+      "domestic": 700,
+      "international": 1200
+    },
+    "max_single_bag_kg": 32,
+    "sports_equipment": "counts toward allowance, must be prepaid as a 15 kg pack if over allowance"
+  },
+  "passengers": {
+    "max_per_booking": 9,
+    "infant": {
+      "age_under_years": 2,
+      "min_age_days": 7,
+      "seat": "lap",
+      "per_adult": 1,
+      "fee": {
+        "domestic": 1500,
+        "international_percent_of_adult_base": 10
+      }
+    },
+    "child": {
+      "age_from_years": 2,
+      "age_to_years": 11,
+      "fare": "adult fare"
+    },
+    "unaccompanied_minor": {
+      "mandatory_age_years": [
+        5,
+        11
+      ],
+      "optional_age_years": [
+        12,
+        17
+      ],
+      "not_allowed_alone_under_years": 5,
+      "fee_per_segment": {
+        "domestic": 5000,
+        "international": 7500
+      }
+    },
+    "pregnancy": {
+      "certificate_required_after_weeks": 28,
+      "certificate_valid_days": 7,
+      "not_permitted_from_weeks_single": 36,
+      "not_permitted_from_weeks_multiple": 32
+    }
+  },
+  "loyalty": {
+    "program": "SkyPoints",
+    "earn_per_100_inr_base_fare": {
+      "BLUE": 5,
+      "SILVER": 6,
+      "GOLD": 8,
+      "PLATINUM": 10
+    },
+    "redeem_value_inr_per_point": 0.5,
+    "redeem_min_points": 1000,
+    "redeem_covers": "base fare only, up to 100 percent; taxes paid by cash or wallet",
+    "redeem_for": "account holder and up to 5 registered nominees",
+    "points_expiry_months": 36,
+    "transfer_between_accounts": false,
+    "tier_thresholds_points_12_months": {
+      "SILVER": 5000,
+      "GOLD": 15000,
+      "PLATINUM": 30000
+    },
+    "tier_benefits": {
+      "SILVER": [
+        "+5 kg checked baggage",
+        "priority check-in"
+      ],
+      "GOLD": [
+        "+10 kg checked baggage",
+        "free standard and preferred seats",
+        "priority boarding",
+        "lounge access on international flights"
+      ],
+      "PLATINUM": [
+        "+15 kg checked baggage",
+        "all seats free",
+        "priority everything",
+        "lounge access on all flights",
+        "dedicated handoff queue"
+      ]
+    }
+  },
+  "goodwill": {
+    "max_skywallet_credit_inr": 1000,
+    "max_per_customer_per_days": 30,
+    "only_for": [
+      "delay_120_plus_minutes",
+      "airline_cancellation",
+      "refund_overdue",
+      "delayed_baggage",
+      "agent_error"
+    ],
+    "above_limit": "handoff_to_human"
+  },
+  "identity": {
+    "booking_level": "PNR + passenger last name, or logged-in account that owns the booking",
+    "account_level": "OTP to registered mobile or email, or logged-in session",
+    "otp_length": 6,
+    "otp_valid_minutes": 10,
+    "max_failed_attempts": 2,
+    "after_max_failed": "lock self-service for 30 minutes and hand off to a human"
+  },
+  "escalation_triggers": [
+    "customer asks for a human twice, or once with a complaint",
+    "two failed identity checks",
+    "account flagged for fraud review",
+    "legal threats or regulator complaints",
+    "medical emergency, medical oxygen, stretcher, or pet (non service-dog) requests",
+    "refund or compensation above 100000 INR",
+    "goodwill above the agent limit",
+    "international disruption compensation",
+    "refund overdue past the timeline",
+    "harassment or abusive language after one warning",
+    "group bookings over 9 passengers"
+  ],
+  "meals": {
+    "price": {
+      "domestic": 400,
+      "international": 800
+    },
+    "included": {
+      "BASIC": [],
+      "STANDARD": [
+        "international"
+      ],
+      "FLEX": [
+        "domestic",
+        "international"
+      ],
+      "BUSINESS": [
+        "domestic",
+        "international"
+      ]
+    },
+    "preorder_until_hours_before_departure": 24
+  }
+}

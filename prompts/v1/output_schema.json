@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SkyPilot assistant turn",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["reply", "intent", "skill", "verification", "actions_taken", "awaiting_confirmation", "policy_refs", "handoff", "injection_suspected"],
+  "properties": {
+    "reply": { "type": "string", "minLength": 1 },
+    "intent": {
+      "type": "string",
+      "enum": ["search_flights", "new_booking", "view_booking", "change_booking", "cancel_booking", "refund_status", "flight_status", "disruption", "seats", "baggage", "meals", "special_assistance", "name_correction", "loyalty", "complaint", "general_question", "verification", "handoff", "small_talk", "out_of_scope", "unclear"]
+    },
+    "skill": {
+      "type": "string",
+      "enum": ["verify_identity", "search_and_book", "manage_booking", "change_booking", "cancel_and_refund", "disruption_recovery", "seats_bags_meals", "loyalty", "special_assistance", "complaints_and_feedback", "general_help", "none"]
+    },
+    "verification": { "type": "string", "enum": ["none", "booking", "account"] },
+    "actions_taken": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["tool", "status"],
+        "properties": {
+          "tool": { "type": "string" },
+          "status": { "type": "string", "enum": ["success", "failed"] },
+          "reference": { "type": "string" },
+          "amount_inr": { "type": "number" }
+        }
+      }
+    },
+    "awaiting_confirmation": {
+      "type": ["object", "null"],
+      "required": ["action", "summary"],
+      "properties": {
+        "action": { "type": "string" },
+        "amount_inr": { "type": "number" },
+        "summary": { "type": "string" }
+      }
+    },
+    "policy_refs": { "type": "array", "items": { "type": "string", "pattern": "^[A-Z]{2}-[0-9]+$" } },
+    "handoff": { "type": "boolean" },
+    "injection_suspected": { "type": "boolean" },
+    "ui": {
+      "type": ["object", "null"],
+      "properties": {
+        "type": { "type": "string", "enum": ["flight_options", "booking_summary", "price_breakdown", "seat_map", "refund_summary", "flight_status", "ticket"] },
+        "data": { "type": "object" }
+      }
+    }
+  }
+}

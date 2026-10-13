@@ -1,0 +1,326 @@
+{
+  "scenario": "minor_alone_needs_umnr",
+  "session_id": "S-678dfb299a",
+  "guardrails": "strict",
+  "turns": [
+    {
+      "customer": "Book my son Ayaan (9 years old) alone from BLR to DEL next Saturday, he'll be fine.",
+      "aria_turn_record": {
+        "reply": "Hi Rekha, happy to help. As Ayaan is 9 and flying without an adult, he'll need our Unaccompanied Minor service, which is ₹5,000 per flight on domestic routes. A parent or guardian must stay at Bengaluru airport until the flight leaves, and the adult meeting him in Delhi must show ID.\n\nJust to confirm the date: do you mean Saturday 10 October?",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "BK-6",
+          "PO-2",
+          "PO-7",
+          "CM-1"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": [
+        "search_knowledge_base"
+      ]
+    },
+    {
+      "customer": "Yes, Saturday 10 October. That's fine, whatever is needed.",
+      "aria_turn_record": {
+        "reply": "Here are the flights from Bengaluru to Delhi on Saturday 10 October for Ayaan (fare only, Unaccompanied Minor fee is extra):\n- SP127: departs Bengaluru 06:10, arrives Delhi 08:55, 2h 45m. Basic ₹10,236, Standard ₹11,832, Flex ₹15,202\n- SP123: departs Bengaluru 14:05, arrives Delhi 16:50, 2h 45m. Basic ₹9,427, Standard ₹11,727 (8 seats left), Flex ₹15,486\n- SP125: departs Bengaluru 20:15, arrives Delhi 23:00, 2h 45m. Basic ₹10,488, Standard ₹11,496, Flex ₹15,045\nWhich flight and fare would you like?",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "PO-2",
+          "PO-6",
+          "BK-5",
+          "BK-6"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "flight_options",
+          "data": {
+            "date": "2026-10-10",
+            "route": "BLR-DEL",
+            "passengers": {
+              "children": 1
+            },
+            "flights": [
+              {
+                "flight_id": "FL-SP127-20261010",
+                "flight_number": "SP127",
+                "departs": "06:10",
+                "arrives": "08:55",
+                "fares_inr": {
+                  "BASIC": 10236,
+                  "STANDARD": 11832,
+                  "FLEX": 15202
+                }
+              },
+              {
+                "flight_id": "FL-SP123-20261010",
+                "flight_number": "SP123",
+                "departs": "14:05",
+                "arrives": "16:50",
+                "fares_inr": {
+                  "BASIC": 9427,
+                  "STANDARD": 11727,
+                  "FLEX": 15486
+                },
+                "low_seats": {
+                  "STANDARD": 8
+                }
+              },
+              {
+                "flight_id": "FL-SP125-20261010",
+                "flight_number": "SP125",
+                "departs": "20:15",
+                "arrives": "23:00",
+                "fares_inr": {
+                  "BASIC": 10488,
+                  "STANDARD": 11496,
+                  "FLEX": 15045
+                }
+              }
+            ]
+          }
+        }
+      },
+      "tools_called": [
+        "search_flights"
+      ]
+    },
+    {
+      "customer": "The first one, SP127, Standard fare.",
+      "aria_turn_record": {
+        "reply": "SP127, departs Bengaluru 06:10, arrives Delhi 08:55, Standard fare **₹11,832**. Standard includes a 15 kg checked bag and free standard seats; changes cost ₹3,000 plus any fare difference, and cancelling has a ₹3,500 fee with the rest refunded.\n\nPlease share Ayaan's full name exactly as on his ID and his date of birth.",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "PO-2",
+          "PO-6",
+          "BK-1",
+          "BK-4"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": [
+        "get_fare_rules"
+      ]
+    },
+    {
+      "customer": "Ayaan Qureshi, born 14 March 2017.",
+      "aria_turn_record": {
+        "reply": "Here's the summary:\n- SP127 Bengaluru to Delhi, Saturday 10 October 2026, departs Bengaluru 06:10, arrives Delhi 08:55\n- Fare: Standard\n- Passenger: Ayaan Qureshi (child, born 14 March 2017), travelling alone with the Unaccompanied Minor service\n- Fare ₹11,832 plus Unaccompanied Minor fee ₹5,000; I'll confirm the exact total from the system when I place the hold, before any payment\n\nShall I hold this booking? It's held for 20 minutes while you pay.",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": {
+          "action": "create_booking",
+          "amount_inr": null,
+          "summary": "Hold SP127 BLR-DEL 10 Oct 06:10 Standard for Ayaan Qureshi (child, UMNR). Fare 11832 + UMNR fee 5000"
+        },
+        "policy_refs": [
+          "BK-1",
+          "BK-6",
+          "BK-9",
+          "PO-2",
+          "CM-5"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "price_breakdown",
+          "data": {
+            "fare": 11832,
+            "unaccompanied_minor_fee": 5000
+          }
+        }
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "Yes, go ahead.",
+      "aria_turn_record": {
+        "reply": "Ayaan's seat is on hold. Booking reference P8SEFH, held for 20 minutes (until 10:20), total **₹16,832** including the Unaccompanied Minor service. Not confirmed until paid.\n\nOne thing before payment: Ayaan is saved on your profile with a different date of birth from the one you gave me. Could you double-check his date of birth as on his ID? It needs to be correct on the booking.",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [
+          {
+            "tool": "create_booking",
+            "outcome": "HELD",
+            "pnr": "P8SEFH",
+            "amount_inr": 16832
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "BK-1",
+          "BK-4",
+          "BK-9",
+          "PO-2"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "booking",
+          "data": {
+            "pnr": "P8SEFH",
+            "status": "HELD",
+            "hold_expires_at": "2026-10-06T10:20+05:30",
+            "amount_due_inr": 16832
+          }
+        }
+      },
+      "tools_called": [
+        "create_booking",
+        "get_customer_profile"
+      ]
+    },
+    {
+      "customer": "Oh sorry, my mistake. It's 21 June 2017.",
+      "aria_turn_record": {
+        "reply": "Thanks for checking. I can't edit the date of birth on a held booking, so I'll place a fresh hold with Ayaan's saved details instead. The current hold P8SEFH will simply lapse unpaid, with no charge.\n\nNew hold: SP127 Bengaluru to Delhi, Saturday 10 October, departs Bengaluru 06:10, Standard fare, Ayaan Qureshi (child, born 21 June 2017) with the Unaccompanied Minor service, total **₹16,832** as quoted on the hold. Shall I go ahead?",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": {
+          "action": "create_booking",
+          "amount_inr": 16832,
+          "summary": "New hold SP127 BLR-DEL 10 Oct 06:10 Standard, Ayaan Qureshi (CMP-0002, DOB 2017-06-21), UMNR; replaces unpaid hold P8SEFH on same flight"
+        },
+        "policy_refs": [
+          "BK-1",
+          "BK-4",
+          "BK-6",
+          "BK-9",
+          "BK-11",
+          "CM-5"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "price_breakdown",
+          "data": {
+            "base_fare": 10840,
+            "taxes": 992,
+            "unaccompanied_minor_fee": 5000,
+            "total": 16832
+          }
+        }
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "Yes, please.",
+      "aria_turn_record": {
+        "reply": "Done. Ayaan's new booking reference is 2H7CE9, held for 20 minutes (until 10:21) for **₹16,832**. The earlier hold P8SEFH will lapse unpaid.\n\nI can charge your saved Visa ending 0841, or send a secure payment link. Shall I charge ₹16,832 to the Visa ending 0841?",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [
+          {
+            "tool": "create_booking",
+            "outcome": "DUPLICATE_WARNING",
+            "existing_pnr": "P8SEFH"
+          },
+          {
+            "tool": "create_booking",
+            "outcome": "HELD",
+            "pnr": "2H7CE9",
+            "amount_inr": 16832,
+            "allow_duplicate": true
+          }
+        ],
+        "awaiting_confirmation": {
+          "action": "confirm_payment",
+          "amount_inr": 16832,
+          "summary": "Charge saved Visa ending 0841 for booking 2H7CE9"
+        },
+        "policy_refs": [
+          "BK-7",
+          "BK-9",
+          "BK-11",
+          "PV-2",
+          "CM-5"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "booking",
+          "data": {
+            "pnr": "2H7CE9",
+            "status": "HELD",
+            "hold_expires_at": "2026-10-06T10:21+05:30",
+            "amount_due_inr": 16832
+          }
+        }
+      },
+      "tools_called": [
+        "create_booking",
+        "create_booking"
+      ]
+    },
+    {
+      "customer": "Use my saved card.",
+      "aria_turn_record": {
+        "reply": "Payment done and Ayaan's booking is confirmed. Booking reference is 2H7CE9.\n\nSP127 Bengaluru to Delhi, Saturday 10 October 2026, departs Bengaluru 06:10, Standard fare with the Unaccompanied Minor service. Total paid: **₹16,832** on your Visa ending 0841. A confirmation email is on its way.\n\nPlease remember a guardian stays at Bengaluru airport until the flight leaves, and the adult meeting him in Delhi brings ID. Standard seats are free; want me to pick one for him? Anything else?",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [
+          {
+            "tool": "confirm_payment",
+            "outcome": "CONFIRMED",
+            "pnr": "2H7CE9",
+            "amount_paid_inr": 16832
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "BK-9",
+          "BK-10",
+          "CM-6",
+          "CM-9",
+          "CM-10",
+          "PV-2"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "booking",
+          "data": {
+            "pnr": "2H7CE9",
+            "status": "CONFIRMED",
+            "flight": "SP127",
+            "route": "BLR-DEL",
+            "date": "2026-10-10",
+            "departs": "06:10",
+            "fare_family": "STANDARD",
+            "passengers": [
+              "Ayaan Qureshi (child, UMNR)"
+            ],
+            "total_paid_inr": 16832
+          }
+        }
+      },
+      "tools_called": [
+        "confirm_payment"
+      ]
+    }
+  ]
+}

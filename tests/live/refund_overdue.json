@@ -1,0 +1,105 @@
+{
+  "scenario": "refund_overdue",
+  "session_id": "S-b082cfe789",
+  "guardrails": "strict",
+  "turns": [
+    {
+      "customer": "I cancelled SBEXP6 in August and still haven't got my money!",
+      "aria_turn_record": {
+        "reply": "Let me check on that refund for you right away. To confirm it's your booking, could you tell me the last name of a passenger on booking reference SBEXP6?",
+        "intent": "refund_status",
+        "skill": "cancel_and_refund",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ID-2"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "Chopra. And this is ridiculous, it's been over a month.",
+      "aria_turn_record": {
+        "reply": "Thanks, Aditi. You're right, and I'm sorry: your refund of **₹4,629** to your card started on 20 Aug and should have arrived by 31 Aug, but it's still processing. I've raised a follow-up, ticket TKT-100151, with a response within 48 hours. For the trouble, I can add ₹1,000 goodwill credit to your SkyWallet, and I can also connect you with a colleague if you'd like.",
+        "intent": "refund_status",
+        "skill": "cancel_and_refund",
+        "verification": "booking",
+        "actions_taken": [
+          {
+            "tool": "create_support_ticket",
+            "outcome": "created",
+            "reference": "TKT-100151"
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ID-2",
+          "CX-8",
+          "ES-4",
+          "ES-5",
+          "ES-6",
+          "CX-5"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": [
+        "verify_booking",
+        "get_refund_status",
+        "get_booking",
+        "create_support_ticket"
+      ]
+    },
+    {
+      "customer": "Fine, I'll take the credit. But I want my actual money.",
+      "aria_turn_record": {
+        "reply": "Understood, the refund itself is being chased under TKT-100151. To add the ₹1,000 credit, I need to confirm your SkyPilot account, since your booking reference only gives me access to this booking. Could you share the phone number, email or SkyPoints number registered to your account? I'll send a one-time code to the contact on file.",
+        "intent": "goodwill",
+        "skill": "cancel_and_refund",
+        "verification": "booking",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ID-3",
+          "ID-4",
+          "ES-6"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "No, I'm not doing more checks. Just let me speak to a human.",
+      "aria_turn_record": {
+        "reply": "Of course. I've passed your case to a colleague with the full details: case number **CASE-50001**, expected wait about 6 minutes. Your refund follow-up ticket is TKT-100151 for ₹4,629. I've noted that you accepted the goodwill credit, so they can look at that too. Please stay in the chat.",
+        "intent": "handoff",
+        "skill": "cancel_and_refund",
+        "verification": "booking",
+        "actions_taken": [
+          {
+            "tool": "handoff_to_human",
+            "outcome": "HANDED_OFF",
+            "reference": "CASE-50001"
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ES-1",
+          "ES-2",
+          "ES-7",
+          "CX-8",
+          "CM-10"
+        ],
+        "handoff": true,
+        "injection_suspected": false
+      },
+      "tools_called": [
+        "handoff_to_human"
+      ]
+    }
+  ]
+}

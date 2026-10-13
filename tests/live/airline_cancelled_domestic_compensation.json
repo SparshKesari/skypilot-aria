@@ -1,0 +1,184 @@
+{
+  "scenario": "airline_cancelled_domestic_compensation",
+  "session_id": "S-8eabaec567",
+  "guardrails": "strict",
+  "turns": [
+    {
+      "customer": "My flight SP155 got cancelled, what now?",
+      "aria_turn_record": {
+        "reply": "I'm sorry your flight was cancelled. I'll help you sort out your options. Could you share your booking reference (the 6-character PNR) and the last name of a passenger on the booking?",
+        "intent": "disruption",
+        "skill": "disruption_recovery",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ID-2",
+          "ES-5"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "CGKFQ4, last name Qureshi.",
+      "aria_turn_record": {
+        "reply": "Thanks, Isha. SP155 Delhi to Goa, due to depart Delhi 17:40 today, was cancelled for a technical reason. You choose between a free rebooking on a Delhi to Goa flight within 3 days either side in economy (no fee, no fare difference), or a full refund of what you paid, ₹9,018. Because you were told less than 24 hours before departure, you're also due compensation of **₹10,000**. There are no other bookable flights left today; tomorrow has SP153 (departs Delhi 11:20) and SP155 (departs Delhi 17:40). Which would you prefer?",
+        "intent": "disruption",
+        "skill": "disruption_recovery",
+        "verification": "booking",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ID-2",
+          "DS-1",
+          "DS-3",
+          "DS-4",
+          "DS-6",
+          "PO-6"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "flight_options",
+          "data": [
+            {
+              "flight_number": "SP153",
+              "date": "2026-10-07",
+              "departs": "DEL 11:20",
+              "arrives": "GOI 13:50",
+              "duration_minutes": 150,
+              "price": "free rebooking"
+            },
+            {
+              "flight_number": "SP155",
+              "date": "2026-10-07",
+              "departs": "DEL 17:40",
+              "arrives": "GOI 20:10",
+              "duration_minutes": 150,
+              "price": "free rebooking"
+            }
+          ]
+        }
+      },
+      "tools_called": [
+        "verify_booking",
+        "get_booking",
+        "get_flight_status",
+        "quote_disruption_compensation",
+        "search_flights",
+        "search_flights"
+      ]
+    },
+    {
+      "customer": "Wait, tell me more about the compensation. How do I get it?",
+      "aria_turn_record": {
+        "reply": "You're due **₹10,000** because the flight was cancelled for a technical reason and you were notified 9.2 hours before departure. It's paid to your original payment method within 7 business days. It's on top of your rebooking or refund, and it stays due unless you accept a rebooking leaving within 2 hours of the original 17:40 departure. Would you like to rebook or take the refund?",
+        "intent": "disruption",
+        "skill": "disruption_recovery",
+        "verification": "booking",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "DS-4",
+          "PO-2",
+          "CX-5"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "Okay, rebook me on the earliest flight tomorrow.",
+      "aria_turn_record": {
+        "reply": "Here's what I'll do: move you from the cancelled SP155 to SP153 on 7 Oct, departing Delhi 11:20 and arriving Goa 13:50, economy, at no cost (₹0). Your ₹10,000 compensation still applies with this flight. Shall I go ahead?",
+        "intent": "disruption",
+        "skill": "disruption_recovery",
+        "verification": "booking",
+        "actions_taken": [],
+        "awaiting_confirmation": {
+          "action": "rebook_disrupted",
+          "amount_inr": 0,
+          "summary": "Rebook PNR CGKFQ4 SEG-001406 from cancelled SP155 6 Oct to SP153 7 Oct DEL 11:20-GOI 13:50, economy, free"
+        },
+        "policy_refs": [
+          "DS-3",
+          "DS-4",
+          "CM-5",
+          "PO-6"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "price_breakdown",
+          "data": {
+            "change_fee": 0,
+            "fare_difference": 0,
+            "total": 0
+          }
+        }
+      },
+      "tools_called": [
+        "quote_disruption_compensation"
+      ]
+    },
+    {
+      "customer": "Yes, go ahead.",
+      "aria_turn_record": {
+        "reply": "Done. Your booking reference CGKFQ4 is now on SP153, 7 Oct, departing Delhi 11:20, arriving Goa 13:50, at no charge. Your ₹10,000 compensation (reference CMP-4F668032) is processing to your original payment method. Your seat from the old flight didn't carry over, so you'll need to pick a seat again. Is there anything else I can help with?",
+        "intent": "disruption",
+        "skill": "disruption_recovery",
+        "verification": "booking",
+        "actions_taken": [
+          {
+            "tool": "rebook_disrupted",
+            "outcome": "REBOOKED",
+            "reference": "CGKFQ4"
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "DS-3",
+          "DS-4",
+          "CM-6",
+          "CM-10"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "booking",
+          "data": {
+            "pnr": "CGKFQ4",
+            "flight_number": "SP153",
+            "date": "2026-10-07",
+            "departs": "DEL 11:20",
+            "arrives": "GOI 13:50",
+            "compensation_ref": "CMP-4F668032"
+          }
+        }
+      },
+      "tools_called": [
+        "rebook_disrupted"
+      ]
+    },
+    {
+      "customer": "No, that's all. Thanks.",
+      "aria_turn_record": {
+        "reply": "You're welcome, Isha. To recap: booking reference CGKFQ4 on SP153, 7 Oct, departs Delhi 11:20, and compensation reference CMP-4F668032. Have a good trip to Goa.",
+        "intent": "other",
+        "skill": "disruption_recovery",
+        "verification": "booking",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "CM-10"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": []
+    }
+  ]
+}

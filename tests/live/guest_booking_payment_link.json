@@ -1,0 +1,273 @@
+{
+  "scenario": "guest_booking_payment_link",
+  "session_id": "S-fb588087a1",
+  "guardrails": "strict",
+  "turns": [
+    {
+      "customer": "Hi, I want to fly Delhi to Goa on 15 October, two adults.",
+      "aria_turn_record": {
+        "reply": "Happy to help. Here are SkyPilot flights from Delhi to Goa on 15 October for 2 adults (total for both):\n- SP153: departs Delhi 11:20, arrives Goa 13:50, 2h 30m. Basic ₹15,306, Standard ₹17,574, Flex ₹22,530\n- SP155: departs Delhi 17:40, arrives Goa 20:10, 2h 30m. Basic ₹15,998, Standard ₹19,044, Flex ₹23,328\nWhich flight and fare would you like?",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ID-1",
+          "PO-2",
+          "PO-6"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "flight_options",
+          "data": {
+            "date": "2026-10-15",
+            "route": "DEL-GOI",
+            "passengers": {
+              "adults": 2
+            },
+            "flights": [
+              {
+                "flight_id": "FL-SP153-20261015",
+                "flight_number": "SP153",
+                "departs": "11:20",
+                "arrives": "13:50",
+                "duration_minutes": 150,
+                "fares_total_inr": {
+                  "BASIC": 15306,
+                  "STANDARD": 17574,
+                  "FLEX": 22530
+                }
+              },
+              {
+                "flight_id": "FL-SP155-20261015",
+                "flight_number": "SP155",
+                "departs": "17:40",
+                "arrives": "20:10",
+                "duration_minutes": 150,
+                "fares_total_inr": {
+                  "BASIC": 15998,
+                  "STANDARD": 19044,
+                  "FLEX": 23328
+                }
+              }
+            ]
+          }
+        }
+      },
+      "tools_called": [
+        "search_flights"
+      ]
+    },
+    {
+      "customer": "The cheapest morning-ish one in Standard please.",
+      "aria_turn_record": {
+        "reply": "Good choice: SP153, departs Delhi 11:20, arrives Goa 13:50, Standard fare, **₹17,574** for both. Standard includes 15 kg checked bag and free standard seats; changes cost ₹3,000 per passenger plus any fare difference, and cancellation has a ₹3,500 fee per passenger with the rest refunded.\n\nPlease share both passengers' full names exactly as on their ID.",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "PO-2",
+          "PO-6",
+          "BK-4"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": [
+        "get_fare_rules"
+      ]
+    },
+    {
+      "customer": "Arjun Malhotra and Sana Malhotra, both adults.",
+      "aria_turn_record": {
+        "reply": "Thanks. Since you're booking as a guest, what's the best mobile number or email for the booking confirmation?",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ID-1"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "+919811000210",
+      "aria_turn_record": {
+        "reply": "Here's your booking summary:\n- SP153 Delhi to Goa, 15 October 2026, departs Delhi 11:20, arrives Goa 13:50\n- Fare: Standard\n- Passengers: Arjun Malhotra (adult), Sana Malhotra (adult)\n- Contact: +91 ••••• ••210\n- Total: **₹17,574**\n\nShall I go ahead and hold this booking? It'll be held for 20 minutes while you pay.",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": {
+          "action": "create_booking",
+          "amount_inr": 17574,
+          "summary": "Hold SP153 DEL-GOI 15 Oct 2026 11:20, Standard, Arjun Malhotra + Sana Malhotra (adults)"
+        },
+        "policy_refs": [
+          "BK-1",
+          "BK-9",
+          "CM-5",
+          "PV-2"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "price_breakdown",
+          "data": {
+            "flight": "SP153",
+            "fare_family": "STANDARD",
+            "passengers": 2,
+            "total": 17574
+          }
+        }
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "Yes, go ahead.",
+      "aria_turn_record": {
+        "reply": "Done, your seats are on hold. Your booking reference is YBC3X9, held for 20 minutes (until 10:20) for **₹17,574**. It's not confirmed until payment completes.\n\nAs you're booking as a guest, I can send a secure payment link by SMS to +91 ••••• ••210. Shall I send it?",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "none",
+        "actions_taken": [
+          {
+            "tool": "create_booking",
+            "outcome": "HELD",
+            "pnr": "YBC3X9",
+            "amount_inr": 17574
+          }
+        ],
+        "awaiting_confirmation": {
+          "action": "send_payment_link",
+          "amount_inr": 17574,
+          "summary": "SMS payment link for held booking YBC3X9"
+        },
+        "policy_refs": [
+          "BK-7",
+          "BK-9",
+          "CM-6",
+          "PV-2"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "booking",
+          "data": {
+            "pnr": "YBC3X9",
+            "status": "HELD",
+            "hold_expires_at": "2026-10-06T10:20+05:30",
+            "amount_due_inr": 17574
+          }
+        }
+      },
+      "tools_called": [
+        "create_booking"
+      ]
+    },
+    {
+      "customer": "Yes, send me the payment link.",
+      "aria_turn_record": {
+        "reply": "I've sent a secure payment link for **₹17,574** by SMS to +91 ••••• ••210. Please complete payment within the 20-minute hold and let me know once you've paid, and I'll confirm your booking.",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "none",
+        "actions_taken": [
+          {
+            "tool": "send_payment_link",
+            "outcome": "sent",
+            "link_id": "PL-166F70EB",
+            "amount_inr": 17574
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "BK-7",
+          "BK-9",
+          "PV-2"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": [
+        "send_payment_link"
+      ]
+    },
+    {
+      "customer": "I've paid.",
+      "aria_turn_record": {
+        "reply": "Payment received and your booking is confirmed. Your booking reference is YBC3X9.\n\nSP153 Delhi to Goa, 15 October 2026, departs Delhi 11:20, Standard fare, for Arjun Malhotra and Sana Malhotra. Total paid: **₹17,574**. A confirmation is on its way to your phone.\n\nStandard seats are free on your fare. Would you like me to pick seats for you both? Anything else I can help with?",
+        "intent": "search_and_book",
+        "skill": "search_and_book",
+        "verification": "none",
+        "actions_taken": [
+          {
+            "tool": "confirm_payment",
+            "outcome": "CONFIRMED",
+            "pnr": "YBC3X9",
+            "amount_paid_inr": 17574
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "BK-9",
+          "BK-10",
+          "CM-6",
+          "CM-9",
+          "CM-10"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "booking",
+          "data": {
+            "pnr": "YBC3X9",
+            "status": "CONFIRMED",
+            "flight": "SP153",
+            "route": "DEL-GOI",
+            "date": "2026-10-15",
+            "departs": "11:20",
+            "fare_family": "STANDARD",
+            "passengers": [
+              "Arjun Malhotra",
+              "Sana Malhotra"
+            ],
+            "total_paid_inr": 17574
+          }
+        }
+      },
+      "tools_called": [
+        "confirm_payment"
+      ]
+    },
+    {
+      "customer": "No, that's all. Thanks!",
+      "aria_turn_record": {
+        "reply": "You're welcome! Have a lovely trip to Goa. Your booking reference is YBC3X9.",
+        "intent": "other",
+        "skill": "search_and_book",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "CM-10"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": []
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "scenario": "delay_190_minutes",
+  "session_id": "S-f4023f50a7",
+  "guardrails": "strict",
+  "turns": [
+    {
+      "customer": "Is SP219 delayed? This is ridiculous.",
+      "aria_turn_record": {
+        "reply": "Yes, Ishaan, and I'm sorry about the wait. SP219 Bengaluru to Mumbai today is delayed 190 minutes because the incoming aircraft arrived late. It's now expected to depart Bengaluru at 14:30 (originally 11:20), from gate A33. Since the delay is over 2 hours, you can collect a ₹300 meal voucher at the gate.",
+        "intent": "flight_status",
+        "skill": "disruption_recovery",
+        "verification": "logged_in",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "DS-1",
+          "DS-2",
+          "DS-6",
+          "ES-5",
+          "PO-6"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": [
+        "get_flight_status",
+        "list_bookings"
+      ]
+    },
+    {
+      "customer": "I want my money back or a free change, this is the third time.",
+      "aria_turn_record": {
+        "reply": "I understand how frustrating repeat delays are. A free change or full refund applies when a delay reaches 6 hours; this one is 190 minutes, so it doesn't qualify. Your Flex fare would normally allow a change, but changes and cancellations close 3 hours before the scheduled 11:20 departure, so I can't change or cancel booking P2NNFN now. I can log a complaint about the repeated delays, or connect you with a colleague. Which would help?",
+        "intent": "complaint",
+        "skill": "disruption_recovery",
+        "verification": "logged_in",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "DS-3",
+          "CH-5",
+          "CX-10",
+          "PO-1",
+          "ES-5"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": [
+        "get_booking"
+      ]
+    },
+    {
+      "customer": "At least give me some compensation for the trouble.",
+      "aria_turn_record": {
+        "reply": "Compensation payments apply to cancellations, not delays, so this flight isn't eligible. I've logged your complaint about the repeated delays: ticket **TKT-100151**, with a reply within 72 hours. As a gesture for today's delay, I can add ₹1,000 goodwill credit to your SkyWallet. Would you like that?",
+        "intent": "complaint",
+        "skill": "complaints_and_feedback",
+        "verification": "logged_in",
+        "actions_taken": [
+          {
+            "tool": "create_support_ticket",
+            "outcome": "created",
+            "reference": "TKT-100151"
+          }
+        ],
+        "awaiting_confirmation": {
+          "action": "issue_goodwill_credit",
+          "amount_inr": 1000,
+          "summary": "₹1,000 SkyWallet goodwill credit to CUS-0001 for 190-minute delay on SP219, PNR P2NNFN"
+        },
+        "policy_refs": [
+          "DS-4",
+          "DS-7",
+          "ES-4",
+          "ES-6",
+          "PO-1"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": [
+        "create_support_ticket"
+      ]
+    },
+    {
+      "customer": "Fine, yes.",
+      "aria_turn_record": {
+        "reply": "Done. ₹1,000 is now in your SkyWallet (reference GW-04EFC29E), bringing your balance to **₹1,000**. Your complaint ticket is TKT-100151. SP219 is expected to leave Bengaluru at 14:30 from gate A33, and your meal voucher is at the gate. Anything else I can help with?",
+        "intent": "complaint",
+        "skill": "complaints_and_feedback",
+        "verification": "logged_in",
+        "actions_taken": [
+          {
+            "tool": "issue_goodwill_credit",
+            "outcome": "CREDITED",
+            "reference": "GW-04EFC29E"
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ES-6",
+          "CM-6",
+          "CM-10",
+          "DS-2"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": [
+        "issue_goodwill_credit"
+      ]
+    },
+    {
+      "customer": "No, that's it.",
+      "aria_turn_record": {
+        "reply": "Thanks, Ishaan. Your references: complaint TKT-100151 and goodwill credit GW-04EFC29E. Safe travels to Mumbai.",
+        "intent": "other",
+        "skill": "complaints_and_feedback",
+        "verification": "logged_in",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "CM-10"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": []
+    }
+  ]
+}

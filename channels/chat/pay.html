@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SkyPilot payment</title>
+<style>body{font:16px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;background:#f4f6fa;color:#0f1b2d;display:grid;place-items:center;min-height:100vh;margin:0}
+.box{background:#fff;border:1px solid #dbe2ec;border-radius:14px;padding:24px;width:min(360px,92vw)}button{width:100%;padding:12px;border:0;border-radius:10px;background:#0b3a6e;color:#fff;font:inherit;cursor:pointer}
+@media (prefers-color-scheme:dark){body{background:#0c1320;color:#e8eef8}.box{background:#131c2c;border-color:#26344b}}</style></head>
+<body><div class="box"><h2>SkyPilot secure payment</h2><p id="d">Loading...</p><button id="b" disabled>Pay</button><p style="font-size:12px;opacity:.7">Test site. No real money moves.</p></div>
+<script>
+const [, , sid, link] = location.pathname.split("/");
+fetch(`/api/paylinks/${sid}/${link}`).then(r => r.json()).then(l => {
+  if (l.error) { document.getElementById("d").textContent = "Link not found."; return; }
+  document.getElementById("d").textContent = `${l.description}: ₹${Number(l.amount).toLocaleString("en-IN")} (${l.status})`;
+  const b = document.getElementById("b"); b.disabled = l.status !== "unpaid"; b.textContent = l.status === "unpaid" ? "Pay now" : "Paid";
+  b.onclick = () => fetch(`/api/pay/${sid}/${link}`, {method: "POST"}).then(() => { b.textContent = "Paid. Return to the chat."; b.disabled = true; });
+});
+</script></body></html>

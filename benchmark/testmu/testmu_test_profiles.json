@@ -1,0 +1,1801 @@
+{
+  "profiles": [
+    {
+      "name": "CUS-0008 Anil Fernandes (BLUE)",
+      "profile_data": {
+        "customer_name": "Anil Fernandes",
+        "customer_id": "CUS-0008",
+        "last_name": "Fernandes",
+        "tier": "BLUE",
+        "registered_phone": "+918524410646",
+        "login_email": "anil.fernandes36@mail.example",
+        "test_otp": "268081",
+        "home_airport": "BLR",
+        "booking_reference_pnr": "",
+        "upcoming_bookings": [
+          {
+            "pnr": "QB8S4T",
+            "fare_family": "BASIC",
+            "flights": "SP281 BLR-GOI 2026-10-12T22:30; SP283 GOI-BLR 2026-10-22T22:30",
+            "passengers": [
+              "Anil Fernandes",
+              "Lakshmi Fernandes",
+              "Anika Fernandes",
+              "Kiara Fernandes"
+            ],
+            "passenger_last_names": [
+              "Fernandes"
+            ]
+          },
+          {
+            "pnr": "U2MT2T",
+            "fare_family": "STANDARD",
+            "flights": "SP287 BLR-COK 2026-11-15T22:30; SP289 COK-BLR 2026-11-27T17:40",
+            "passengers": [
+              "Anil Fernandes",
+              "Lakshmi Fernandes",
+              "Anika Fernandes",
+              "Kiara Fernandes"
+            ],
+            "passenger_last_names": [
+              "Fernandes"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Visa card ending 6622 (expires 05/2030)",
+          "UPI",
+          "Mastercard card ending 9733 (expires 05/2030)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "saved_companions": [
+          {
+            "name": "Lakshmi Fernandes",
+            "relation": "spouse",
+            "date_of_birth": "1989-08-06"
+          },
+          {
+            "name": "Anika Fernandes",
+            "relation": "child",
+            "date_of_birth": "2017-10-23"
+          },
+          {
+            "name": "Kiara Fernandes",
+            "relation": "child",
+            "date_of_birth": "2013-03-21"
+          }
+        ]
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0020 Suresh Fernandes (BLUE)",
+      "profile_data": {
+        "customer_name": "Suresh Fernandes",
+        "customer_id": "CUS-0020",
+        "last_name": "Fernandes",
+        "tier": "BLUE",
+        "registered_phone": "+917858176252",
+        "login_email": "suresh.fernandes70@mail.example",
+        "test_otp": "363109",
+        "home_airport": "BOM",
+        "booking_reference_pnr": "",
+        "upcoming_bookings": [
+          {
+            "pnr": "U3FBZJ",
+            "fare_family": "FLEX",
+            "flights": "SP027 BOM-DXB 2026-11-10T19:30; SP029 DXB-BOM 2026-11-26T09:10",
+            "passengers": [
+              "Suresh Fernandes"
+            ],
+            "passenger_last_names": [
+              "Fernandes"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Mastercard card ending 2796 (expires 05/2029)",
+          "UPI",
+          "Amex card ending 3485 (expires 03/2028)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "infant_travelling": {
+          "name": "Aarav Fernandes",
+          "date_of_birth": "2025-12-10",
+          "relation": "son"
+        }
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0043 Isha Qureshi (SILVER) [CGKFQ4]",
+      "profile_data": {
+        "customer_name": "Isha Qureshi",
+        "customer_id": "CUS-0043",
+        "last_name": "Qureshi",
+        "tier": "SILVER",
+        "registered_phone": "+918529301267",
+        "login_email": "isha.qureshi56@mail.example",
+        "test_otp": "545246",
+        "home_airport": "DEL",
+        "booking_reference_pnr": "CGKFQ4",
+        "upcoming_bookings": [
+          {
+            "pnr": "CGKFQ4",
+            "fare_family": "STANDARD",
+            "flights": "SP155 DEL-GOI 2026-10-06T17:40",
+            "passengers": [
+              "Isha Qureshi"
+            ],
+            "passenger_last_names": [
+              "Qureshi"
+            ]
+          },
+          {
+            "pnr": "BGNCF4",
+            "fare_family": "STANDARD",
+            "flights": "SP175 DEL-AMD 2026-10-14T20:15; SP179 AMD-DEL 2026-10-18T20:15",
+            "passengers": [
+              "Isha Qureshi"
+            ],
+            "passenger_last_names": [
+              "Qureshi"
+            ]
+          },
+          {
+            "pnr": "Q4FUSV",
+            "fare_family": "FLEX",
+            "flights": "SP161 DEL-COK 2026-11-07T06:10; SP163 COK-DEL 2026-11-14T06:10",
+            "passengers": [
+              "Isha Qureshi"
+            ],
+            "passenger_last_names": [
+              "Qureshi"
+            ]
+          },
+          {
+            "pnr": "GZURF9",
+            "fare_family": "STANDARD",
+            "flights": "SP105 DEL-BOM 2026-11-19T20:15; SP115 BOM-DEL 2026-11-22T06:10",
+            "passengers": [
+              "Isha Qureshi"
+            ],
+            "passenger_last_names": [
+              "Qureshi"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Mastercard card ending 3338 (expires 05/2030)",
+          "UPI",
+          "Visa card ending 3117 (expires 10/2029)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0046 Yash Ahmed (BLUE)",
+      "profile_data": {
+        "customer_name": "Yash Ahmed",
+        "customer_id": "CUS-0046",
+        "last_name": "Ahmed",
+        "tier": "BLUE",
+        "registered_phone": "+916889870415",
+        "login_email": "yash.ahmed49@mail.example",
+        "test_otp": "569003",
+        "home_airport": "DEL",
+        "booking_reference_pnr": "",
+        "upcoming_bookings": [
+          {
+            "pnr": "FWDWRC",
+            "fare_family": "STANDARD",
+            "flights": "SP139 DEL-MAA 2026-10-06T11:20",
+            "passengers": [
+              "Yash Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          },
+          {
+            "pnr": "YZEWGE",
+            "fare_family": "FLEX",
+            "flights": "SP119 DEL-BLR 2026-10-24T20:15; SP127 BLR-DEL 2026-10-26T06:10",
+            "passengers": [
+              "Yash Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          },
+          {
+            "pnr": "CHK6MT",
+            "fare_family": "FLEX",
+            "flights": "SP153 DEL-GOI 2026-10-29T11:20; SP159 GOI-DEL 2026-11-07T17:40",
+            "passengers": [
+              "Yash Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          },
+          {
+            "pnr": "3TUW66",
+            "fare_family": "FLEX",
+            "flights": "SP013 DEL-SIN 2026-11-01T23:40; SP015 SIN-DEL 2026-11-16T09:10",
+            "passengers": [
+              "Yash Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Amex card ending 8617 (expires 01/2028)",
+          "UPI",
+          "Amex card ending 0538 (expires 07/2029)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0039 Gaurav Bose (SILVER)",
+      "profile_data": {
+        "customer_name": "Gaurav Bose",
+        "customer_id": "CUS-0039",
+        "last_name": "Bose",
+        "tier": "SILVER",
+        "registered_phone": "+917394246466",
+        "login_email": "gaurav.bose23@mail.example",
+        "test_otp": "513570",
+        "home_airport": "BOM",
+        "booking_reference_pnr": "",
+        "upcoming_bookings": [
+          {
+            "pnr": "GKNNKS",
+            "fare_family": "BASIC",
+            "flights": "SP249 BOM-COK 2026-11-25T11:20; SP251 COK-BOM 2026-12-05T11:20",
+            "passengers": [
+              "Gaurav Bose",
+              "Meera Bose"
+            ],
+            "passenger_last_names": [
+              "Bose"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Visa card ending 3187 (expires 10/2028)",
+          "UPI",
+          "Visa card ending 7536 (expires 12/2027)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "saved_companions": [
+          {
+            "name": "Meera Bose",
+            "relation": "spouse",
+            "date_of_birth": "1990-06-13"
+          }
+        ],
+        "friend_travelling": {
+          "name": "Rohan Mehta",
+          "note": "a friend, not on the SkyPoints account"
+        }
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0048 Vivaan Sethi (BLUE) [GBVWTS]",
+      "profile_data": {
+        "customer_name": "Vivaan Sethi",
+        "customer_id": "CUS-0048",
+        "last_name": "Sethi",
+        "tier": "BLUE",
+        "registered_phone": "+919112433516",
+        "login_email": "vivaan.sethi25@mail.example",
+        "test_otp": "584841",
+        "home_airport": "MAA",
+        "booking_reference_pnr": "GBVWTS",
+        "upcoming_bookings": [
+          {
+            "pnr": "44C89H",
+            "fare_family": "BASIC",
+            "flights": "SP235 MAA-BOM 2026-10-22T17:40; SP231 BOM-MAA 2026-10-30T17:40",
+            "passengers": [
+              "Vivaan Sethi"
+            ],
+            "passenger_last_names": [
+              "Sethi"
+            ]
+          },
+          {
+            "pnr": "GBVWTS",
+            "fare_family": "BASIC",
+            "flights": "SP275 MAA-BLR 2026-10-25T17:40",
+            "passengers": [
+              "Vivaan Sethi"
+            ],
+            "passenger_last_names": [
+              "Sethi"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Visa card ending 2370 (expires 06/2030)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "colleague_travelling": {
+          "name": "Dev Rao"
+        }
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0028 Gurleen Khan (BLUE)",
+      "profile_data": {
+        "customer_name": "Gurleen Khan",
+        "customer_id": "CUS-0028",
+        "last_name": "Khan",
+        "tier": "BLUE",
+        "registered_phone": "+916334635213",
+        "login_email": "gurleen.khan22@mail.example",
+        "test_otp": "426461",
+        "home_airport": "BOM",
+        "booking_reference_pnr": "",
+        "upcoming_bookings": [
+          {
+            "pnr": "PWELMP",
+            "fare_family": "FLEX",
+            "flights": "SP231 BOM-MAA 2026-10-24T17:40",
+            "passengers": [
+              "Rekha Verma"
+            ],
+            "passenger_last_names": [
+              "Verma"
+            ]
+          },
+          {
+            "pnr": "3HQ7CP",
+            "fare_family": "FLEX",
+            "flights": "SP213 BOM-BLR 2026-10-30T11:20; SP219 BLR-BOM 2026-11-01T11:20",
+            "passengers": [
+              "Zoya Ahmed",
+              "Fatima Bose"
+            ],
+            "passenger_last_names": [
+              "Ahmed",
+              "Bose"
+            ]
+          },
+          {
+            "pnr": "5NLJ4P",
+            "fare_family": "STANDARD",
+            "flights": "SP243 BOM-GOI 2026-10-30T22:30; SP247 GOI-BOM 2026-11-03T22:30",
+            "passengers": [
+              "Zoya Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "RuPay card ending 0613 (expires 11/2027)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "saved_companions": [
+          {
+            "name": "Varun Patel",
+            "relation": "parent",
+            "date_of_birth": "1990-02-21"
+          },
+          {
+            "name": "Rekha Verma",
+            "relation": "client",
+            "date_of_birth": "1995-12-06"
+          },
+          {
+            "name": "Sunita Gupta",
+            "relation": "client",
+            "date_of_birth": "1966-04-10"
+          },
+          {
+            "name": "Fatima Bose",
+            "relation": "manager",
+            "date_of_birth": "1998-03-05"
+          },
+          {
+            "name": "Zoya Ahmed",
+            "relation": "client",
+            "date_of_birth": "1982-12-25"
+          }
+        ],
+        "note": "You book trips for your team. You are not a passenger on these bookings."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0041 Gurleen Singh (BLUE) [WX779F]",
+      "profile_data": {
+        "customer_name": "Gurleen Singh",
+        "customer_id": "CUS-0041",
+        "last_name": "Singh",
+        "tier": "BLUE",
+        "registered_phone": "+917446026195",
+        "login_email": "gurleen.singh97@mail.example",
+        "test_otp": "529408",
+        "home_airport": "BLR",
+        "booking_reference_pnr": "WX779F",
+        "upcoming_bookings": [
+          {
+            "pnr": "WX779F",
+            "fare_family": "FLEX",
+            "flights": "SP281 BLR-GOI 2026-11-18T22:30; SP283 GOI-BLR 2026-11-27T22:30",
+            "passengers": [
+              "Gurleen Singh",
+              "Imran Singh"
+            ],
+            "passenger_last_names": [
+              "Singh"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Visa card ending 0289 (expires 09/2029)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "saved_companions": [
+          {
+            "name": "Imran Singh",
+            "relation": "spouse",
+            "date_of_birth": "1992-09-10"
+          }
+        ]
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0018 Lakshmi Shah (PLATINUM) [63YVLA]",
+      "profile_data": {
+        "customer_name": "Lakshmi Shah",
+        "customer_id": "CUS-0018",
+        "last_name": "Shah",
+        "tier": "PLATINUM",
+        "registered_phone": "+917906188479",
+        "login_email": "lakshmi.shah66@mail.example",
+        "test_otp": "347271",
+        "home_airport": "BOM",
+        "booking_reference_pnr": "63YVLA",
+        "upcoming_bookings": [
+          {
+            "pnr": "63YVLA",
+            "fare_family": "STANDARD",
+            "flights": "SP033 BOM-LHR 2026-10-28T13:30",
+            "passengers": [
+              "Lakshmi Shah"
+            ],
+            "passenger_last_names": [
+              "Shah"
+            ]
+          },
+          {
+            "pnr": "974SCV",
+            "fare_family": "STANDARD",
+            "flights": "SP037 BOM-SIN 2026-11-01T23:40; SP039 SIN-BOM 2026-11-05T09:10",
+            "passengers": [
+              "Lakshmi Shah"
+            ],
+            "passenger_last_names": [
+              "Shah"
+            ]
+          },
+          {
+            "pnr": "ZCW4CH",
+            "fare_family": "FLEX",
+            "flights": "SP041 BOM-DOH 2026-11-06T03:20",
+            "passengers": [
+              "Lakshmi Shah"
+            ],
+            "passenger_last_names": [
+              "Shah"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Mastercard card ending 0473 (expires 05/2030)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0006 Sneha Malhotra (BLUE)",
+      "profile_data": {
+        "customer_name": "Sneha Malhotra",
+        "customer_id": "CUS-0006",
+        "last_name": "Malhotra",
+        "tier": "BLUE",
+        "registered_phone": "+917695793186",
+        "login_email": "sneha.malhotra20@mail.example",
+        "test_otp": "252243",
+        "home_airport": "BOM",
+        "booking_reference_pnr": "",
+        "upcoming_bookings": [
+          {
+            "pnr": "5C7PXU",
+            "fare_family": "STANDARD",
+            "flights": "SP111 BOM-DEL 2026-11-02T14:05",
+            "passengers": [
+              "Sneha Malhotra",
+              "Suresh Malhotra",
+              "Vihaan Malhotra",
+              "Kiara Malhotra"
+            ],
+            "passenger_last_names": [
+              "Malhotra"
+            ]
+          },
+          {
+            "pnr": "H7EHPK",
+            "fare_family": "STANDARD",
+            "flights": "SP111 BOM-DEL 2026-11-02T14:05",
+            "passengers": [
+              "Sneha Malhotra",
+              "Suresh Malhotra",
+              "Vihaan Malhotra",
+              "Kiara Malhotra"
+            ],
+            "passenger_last_names": [
+              "Malhotra"
+            ]
+          },
+          {
+            "pnr": "V22XC6",
+            "fare_family": "STANDARD",
+            "flights": "SP241 BOM-GOI 2026-11-26T17:40; SP247 GOI-BOM 2026-12-05T22:30",
+            "passengers": [
+              "Sneha Malhotra",
+              "Suresh Malhotra",
+              "Vihaan Malhotra",
+              "Kiara Malhotra"
+            ],
+            "passenger_last_names": [
+              "Malhotra"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Mastercard card ending 3047 (expires 09/2027)",
+          "UPI",
+          "Amex card ending 8732 (expires 06/2028)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "saved_companions": [
+          {
+            "name": "Suresh Malhotra",
+            "relation": "spouse",
+            "date_of_birth": "1988-03-24"
+          },
+          {
+            "name": "Vihaan Malhotra",
+            "relation": "child",
+            "date_of_birth": "2021-07-09"
+          },
+          {
+            "name": "Kiara Malhotra",
+            "relation": "child",
+            "date_of_birth": "2019-02-12"
+          }
+        ]
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0003 Farhan Pillai (PLATINUM) [DD25MN]",
+      "profile_data": {
+        "customer_name": "Farhan Pillai",
+        "customer_id": "CUS-0003",
+        "last_name": "Pillai",
+        "tier": "PLATINUM",
+        "registered_phone": "+916778486488",
+        "login_email": "farhan.pillai19@mail.example",
+        "test_otp": "228486",
+        "home_airport": "BOM",
+        "booking_reference_pnr": "DD25MN",
+        "upcoming_bookings": [
+          {
+            "pnr": "DD25MN",
+            "fare_family": "FLEX",
+            "flights": "SP253 BOM-AMD 2026-10-12T20:15; SP255 AMD-BOM 2026-10-20T20:15",
+            "passengers": [
+              "Farhan Pillai"
+            ],
+            "passenger_last_names": [
+              "Pillai"
+            ]
+          },
+          {
+            "pnr": "9662X3",
+            "fare_family": "FLEX",
+            "flights": "SP243 BOM-GOI 2026-10-18T22:30; SP245 GOI-BOM 2026-10-29T17:40",
+            "passengers": [
+              "Farhan Pillai"
+            ],
+            "passenger_last_names": [
+              "Pillai"
+            ]
+          },
+          {
+            "pnr": "8LQ7RN",
+            "fare_family": "FLEX",
+            "flights": "SP249 BOM-COK 2026-10-19T11:20; SP251 COK-BOM 2026-10-29T11:20",
+            "passengers": [
+              "Farhan Pillai"
+            ],
+            "passenger_last_names": [
+              "Pillai"
+            ]
+          },
+          {
+            "pnr": "FHFEM7",
+            "fare_family": "BUSINESS",
+            "flights": "SP109 BOM-DEL 2026-10-31T08:45; SP103 DEL-BOM 2026-11-07T14:05",
+            "passengers": [
+              "Farhan Pillai"
+            ],
+            "passenger_last_names": [
+              "Pillai"
+            ]
+          },
+          {
+            "pnr": "3BENTA",
+            "fare_family": "FLEX",
+            "flights": "SP037 BOM-SIN 2026-11-11T23:40; SP039 SIN-BOM 2026-12-01T09:10",
+            "passengers": [
+              "Farhan Pillai"
+            ],
+            "passenger_last_names": [
+              "Pillai"
+            ]
+          },
+          {
+            "pnr": "8T8M87",
+            "fare_family": "BUSINESS",
+            "flights": "SP223 BOM-HYD 2026-11-17T20:15",
+            "passengers": [
+              "Farhan Pillai"
+            ],
+            "passenger_last_names": [
+              "Pillai"
+            ]
+          },
+          {
+            "pnr": "ZDKNNW",
+            "fare_family": "FLEX",
+            "flights": "SP249 BOM-COK 2026-11-22T11:20; SP251 COK-BOM 2026-12-02T11:20",
+            "passengers": [
+              "Farhan Pillai"
+            ],
+            "passenger_last_names": [
+              "Pillai"
+            ]
+          },
+          {
+            "pnr": "6UB8SB",
+            "fare_family": "FLEX",
+            "flights": "SP229 BOM-MAA 2026-11-28T11:20",
+            "passengers": [
+              "Farhan Pillai"
+            ],
+            "passenger_last_names": [
+              "Pillai"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "RuPay card ending 7955 (expires 01/2028)",
+          "UPI"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0037 Rekha Banerjee (BLUE)",
+      "profile_data": {
+        "customer_name": "Rekha Banerjee",
+        "customer_id": "CUS-0037",
+        "last_name": "Banerjee",
+        "tier": "BLUE",
+        "registered_phone": "+918201461338",
+        "login_email": "rekha.banerjee62@mail.example",
+        "test_otp": "497732",
+        "home_airport": "DEL",
+        "booking_reference_pnr": "",
+        "upcoming_bookings": [
+          {
+            "pnr": "VDGMWG",
+            "fare_family": "STANDARD",
+            "flights": "SP173 DEL-AMD 2026-10-24T14:05; SP179 AMD-DEL 2026-11-05T20:15",
+            "passengers": [
+              "Rekha Banerjee"
+            ],
+            "passenger_last_names": [
+              "Banerjee"
+            ]
+          },
+          {
+            "pnr": "H963WZ",
+            "fare_family": "STANDARD",
+            "flights": "SP117 DEL-BLR 2026-10-31T14:05; SP127 BLR-DEL 2026-11-12T06:10",
+            "passengers": [
+              "Rekha Banerjee"
+            ],
+            "passenger_last_names": [
+              "Banerjee"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Mastercard card ending 0700 (expires 05/2030)",
+          "UPI",
+          "Amex card ending 8005 (expires 09/2030)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0010 Pooja Kulkarni (BLUE) [55AG9K]",
+      "profile_data": {
+        "customer_name": "Pooja Kulkarni",
+        "customer_id": "CUS-0010",
+        "last_name": "Kulkarni",
+        "tier": "BLUE",
+        "registered_phone": "+919645291280",
+        "login_email": "pooja.kulkarni3@mail.example",
+        "test_otp": "283919",
+        "home_airport": "BLR",
+        "booking_reference_pnr": "55AG9K",
+        "upcoming_bookings": [
+          {
+            "pnr": "55AG9K",
+            "fare_family": "BASIC",
+            "flights": "SP125 BLR-DEL 2026-10-20T20:15",
+            "passengers": [
+              "Pooja Kulkarni"
+            ],
+            "passenger_last_names": [
+              "Kulkarni"
+            ]
+          },
+          {
+            "pnr": "CCRYH6",
+            "fare_family": "BASIC",
+            "flights": "SP281 BLR-GOI 2026-11-07T22:30; SP283 GOI-BLR 2026-11-15T22:30",
+            "passengers": [
+              "Pooja Kulkarni"
+            ],
+            "passenger_last_names": [
+              "Kulkarni"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "UPI"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0045 Ishaan Joshi (BLUE) [XR6HFN]",
+      "profile_data": {
+        "customer_name": "Ishaan Joshi",
+        "customer_id": "CUS-0045",
+        "last_name": "Joshi",
+        "tier": "BLUE",
+        "registered_phone": "+917417264366",
+        "login_email": "ishaan.joshi33@mail.example",
+        "test_otp": "561084",
+        "home_airport": "BOM",
+        "booking_reference_pnr": "XR6HFN",
+        "upcoming_bookings": [
+          {
+            "pnr": "XR6HFN",
+            "fare_family": "FLEX",
+            "flights": "SP109 BOM-DEL 2026-10-07T08:45",
+            "passengers": [
+              "Ishaan Joshi"
+            ],
+            "passenger_last_names": [
+              "Joshi"
+            ]
+          },
+          {
+            "pnr": "6UW3CW",
+            "fare_family": "FLEX",
+            "flights": "SP025 BOM-DXB 2026-10-20T04:15; SP031 DXB-BOM 2026-10-22T21:50",
+            "passengers": [
+              "Ishaan Joshi"
+            ],
+            "passenger_last_names": [
+              "Joshi"
+            ]
+          },
+          {
+            "pnr": "5F7BYY",
+            "fare_family": "STANDARD",
+            "flights": "SP241 BOM-GOI 2026-11-19T17:40; SP247 GOI-BOM 2026-11-21T22:30",
+            "passengers": [
+              "Ishaan Joshi"
+            ],
+            "passenger_last_names": [
+              "Joshi"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Mastercard card ending 6610 (expires 07/2028)",
+          "UPI",
+          "Mastercard card ending 7652 (expires 11/2029)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0049 Kabir Sharma (BLUE) [NJ8FVL]",
+      "profile_data": {
+        "customer_name": "Kabir Sharma",
+        "customer_id": "CUS-0049",
+        "last_name": "Sharma",
+        "tier": "BLUE",
+        "registered_phone": "+918114829418",
+        "login_email": "kabir.sharma46@mail.example",
+        "test_otp": "592760",
+        "home_airport": "DEL",
+        "booking_reference_pnr": "NJ8FVL",
+        "upcoming_bookings": [
+          {
+            "pnr": "NJ8FVL",
+            "fare_family": "STANDARD",
+            "flights": "SP101 DEL-BOM 2026-10-10T08:45",
+            "passengers": [
+              "Kabir Sharma"
+            ],
+            "passenger_last_names": [
+              "Sharma"
+            ]
+          },
+          {
+            "pnr": "B7RAAE",
+            "fare_family": "BASIC",
+            "flights": "SP131 DEL-HYD 2026-10-19T14:05; SP135 HYD-DEL 2026-10-28T14:05",
+            "passengers": [
+              "Kabir Sharma"
+            ],
+            "passenger_last_names": [
+              "Sharma"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Mastercard card ending 2866 (expires 08/2027)",
+          "UPI",
+          "Amex card ending 3354 (expires 11/2030)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0004 Sunita Chopra (PLATINUM) [45RWGN]",
+      "profile_data": {
+        "customer_name": "Sunita Chopra",
+        "customer_id": "CUS-0004",
+        "last_name": "Chopra",
+        "tier": "PLATINUM",
+        "registered_phone": "+919847267147",
+        "login_email": "sunita.chopra41@mail.example",
+        "test_otp": "236405",
+        "home_airport": "BOM",
+        "booking_reference_pnr": "45RWGN",
+        "upcoming_bookings": [
+          {
+            "pnr": "82J6AZ",
+            "fare_family": "FLEX",
+            "flights": "SP213 BOM-BLR 2026-10-25T11:20; SP215 BLR-BOM 2026-11-01T20:15",
+            "passengers": [
+              "Sunita Chopra"
+            ],
+            "passenger_last_names": [
+              "Chopra"
+            ]
+          },
+          {
+            "pnr": "HENK7K",
+            "fare_family": "FLEX",
+            "flights": "SP243 BOM-GOI 2026-10-26T22:30; SP245 GOI-BOM 2026-11-07T17:40",
+            "passengers": [
+              "Sunita Chopra"
+            ],
+            "passenger_last_names": [
+              "Chopra"
+            ]
+          },
+          {
+            "pnr": "3U8UCF",
+            "fare_family": "BUSINESS",
+            "flights": "SP025 BOM-DXB 2026-11-05T04:15; SP031 DXB-BOM 2026-11-23T21:50",
+            "passengers": [
+              "Sunita Chopra"
+            ],
+            "passenger_last_names": [
+              "Chopra"
+            ]
+          },
+          {
+            "pnr": "TNMQHY",
+            "fare_family": "FLEX",
+            "flights": "SP253 BOM-AMD 2026-11-06T20:15; SP255 AMD-BOM 2026-11-13T20:15",
+            "passengers": [
+              "Sunita Chopra"
+            ],
+            "passenger_last_names": [
+              "Chopra"
+            ]
+          },
+          {
+            "pnr": "TZ3NQ5",
+            "fare_family": "FLEX",
+            "flights": "SP241 BOM-GOI 2026-11-07T17:40; SP245 GOI-BOM 2026-11-14T17:40",
+            "passengers": [
+              "Sunita Chopra"
+            ],
+            "passenger_last_names": [
+              "Chopra"
+            ]
+          },
+          {
+            "pnr": "DJB5E7",
+            "fare_family": "FLEX",
+            "flights": "SP223 BOM-HYD 2026-11-09T20:15; SP227 HYD-BOM 2026-11-14T20:15",
+            "passengers": [
+              "Sunita Chopra"
+            ],
+            "passenger_last_names": [
+              "Chopra"
+            ]
+          },
+          {
+            "pnr": "45RWGN",
+            "fare_family": "STANDARD",
+            "flights": "SP209 BOM-BLR 2026-11-10T20:15; SP215 BLR-BOM 2026-11-19T20:15",
+            "passengers": [
+              "Sunita Chopra"
+            ],
+            "passenger_last_names": [
+              "Chopra"
+            ]
+          },
+          {
+            "pnr": "BVAX35",
+            "fare_family": "FLEX",
+            "flights": "SP231 BOM-MAA 2026-11-16T17:40",
+            "passengers": [
+              "Sunita Chopra"
+            ],
+            "passenger_last_names": [
+              "Chopra"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Visa card ending 0731 (expires 04/2028)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0026 Diya Khan (BLUE) [33XFFU]",
+      "profile_data": {
+        "customer_name": "Diya Khan",
+        "customer_id": "CUS-0026",
+        "last_name": "Khan",
+        "tier": "BLUE",
+        "registered_phone": "+917049074182",
+        "login_email": "diya.khan84@mail.example",
+        "test_otp": "410623",
+        "home_airport": "DEL",
+        "booking_reference_pnr": "33XFFU",
+        "upcoming_bookings": [
+          {
+            "pnr": "33XFFU",
+            "fare_family": "STANDARD",
+            "flights": "SP119 DEL-BLR 2026-10-15T20:15",
+            "passengers": [
+              "Priyanka Chopda",
+              "Mohd Arif"
+            ],
+            "passenger_last_names": [
+              "Arif",
+              "Chopda"
+            ]
+          },
+          {
+            "pnr": "GA46YF",
+            "fare_family": "BASIC",
+            "flights": "SP167 DEL-PNQ 2026-10-24T22:30",
+            "passengers": [
+              "Divya Reddy",
+              "Fatima Singh"
+            ],
+            "passenger_last_names": [
+              "Reddy",
+              "Singh"
+            ]
+          },
+          {
+            "pnr": "7L992E",
+            "fare_family": "STANDARD",
+            "flights": "SP153 DEL-GOI 2026-10-27T11:20; SP159 GOI-DEL 2026-11-07T17:40",
+            "passengers": [
+              "Fatima Singh",
+              "Divya Reddy"
+            ],
+            "passenger_last_names": [
+              "Reddy",
+              "Singh"
+            ]
+          },
+          {
+            "pnr": "QB97TN",
+            "fare_family": "BASIC",
+            "flights": "SP205 DEL-GAU 2026-11-29T06:10",
+            "passengers": [
+              "Gaurav Qureshi",
+              "Divya Reddy"
+            ],
+            "passenger_last_names": [
+              "Qureshi",
+              "Reddy"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Amex card ending 2924 (expires 06/2027)",
+          "UPI",
+          "Mastercard card ending 9161 (expires 04/2028)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "saved_companions": [
+          {
+            "name": "Fatima Singh",
+            "relation": "manager",
+            "date_of_birth": "1969-08-20"
+          },
+          {
+            "name": "Gaurav Qureshi",
+            "relation": "manager",
+            "date_of_birth": "1965-06-04"
+          },
+          {
+            "name": "Divya Reddy",
+            "relation": "client",
+            "date_of_birth": "1987-01-27"
+          }
+        ],
+        "note": "You booked for other people and are not a passenger. To verify a booking, give its reference and a PASSENGER's last name, not your own."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0005 Rekha Qureshi (BLUE)",
+      "profile_data": {
+        "customer_name": "Rekha Qureshi",
+        "customer_id": "CUS-0005",
+        "last_name": "Qureshi",
+        "tier": "BLUE",
+        "registered_phone": "+919283792984",
+        "login_email": "rekha.qureshi20@mail.example",
+        "test_otp": "244324",
+        "home_airport": "BLR",
+        "booking_reference_pnr": "",
+        "upcoming_bookings": [
+          {
+            "pnr": "MDGU5J",
+            "fare_family": "STANDARD",
+            "flights": "SP287 BLR-COK 2026-10-28T22:30; SP289 COK-BLR 2026-11-09T17:40",
+            "passengers": [
+              "Rekha Qureshi",
+              "Kabir Qureshi",
+              "Ayaan Qureshi",
+              "Kiara Qureshi"
+            ],
+            "passenger_last_names": [
+              "Qureshi"
+            ]
+          },
+          {
+            "pnr": "REN23Y",
+            "fare_family": "STANDARD",
+            "flights": "SP285 BLR-COK 2026-11-02T17:40; SP291 COK-BLR 2026-11-12T22:30",
+            "passengers": [
+              "Rekha Qureshi",
+              "Kabir Qureshi",
+              "Ayaan Qureshi",
+              "Kiara Qureshi"
+            ],
+            "passenger_last_names": [
+              "Qureshi"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Visa card ending 0841 (expires 02/2029)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "saved_companions": [
+          {
+            "name": "Kabir Qureshi",
+            "relation": "spouse",
+            "date_of_birth": "1983-09-24"
+          },
+          {
+            "name": "Ayaan Qureshi",
+            "relation": "child",
+            "date_of_birth": "2017-06-21"
+          },
+          {
+            "name": "Kiara Qureshi",
+            "relation": "child",
+            "date_of_birth": "2015-02-19"
+          }
+        ],
+        "nephew": {
+          "name": "Kabir Qureshi",
+          "date_of_birth": "2022-03-02",
+          "note": "nephew, age 4, NOT on your saved profile (your saved Kabir Qureshi is your husband)"
+        }
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0038 Diya Fernandes (SILVER) [U3DZFP]",
+      "profile_data": {
+        "customer_name": "Diya Fernandes",
+        "customer_id": "CUS-0038",
+        "last_name": "Fernandes",
+        "tier": "SILVER",
+        "registered_phone": "+918885681067",
+        "login_email": "diya.fernandes47@mail.example",
+        "test_otp": "505651",
+        "home_airport": "BOM",
+        "booking_reference_pnr": "U3DZFP",
+        "upcoming_bookings": [
+          {
+            "pnr": "U3DZFP",
+            "fare_family": "STANDARD",
+            "flights": "SP209 BOM-BLR 2026-10-07T20:15",
+            "passengers": [
+              "Diya Fernandes",
+              "Rajesh Fernandes"
+            ],
+            "passenger_last_names": [
+              "Fernandes"
+            ]
+          },
+          {
+            "pnr": "54CX79",
+            "fare_family": "STANDARD",
+            "flights": "SP249 BOM-COK 2026-10-15T11:20; SP251 COK-BOM 2026-10-26T11:20",
+            "passengers": [
+              "Diya Fernandes",
+              "Rajesh Fernandes"
+            ],
+            "passenger_last_names": [
+              "Fernandes"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Mastercard card ending 4559 (expires 03/2028)",
+          "UPI"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "saved_companions": [
+          {
+            "name": "Rajesh Fernandes",
+            "relation": "spouse",
+            "date_of_birth": "1992-08-05"
+          }
+        ]
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0034 Aditi Chopra (BLUE) [SBEXP6]",
+      "profile_data": {
+        "customer_name": "Aditi Chopra",
+        "customer_id": "CUS-0034",
+        "last_name": "Chopra",
+        "tier": "BLUE",
+        "registered_phone": "+918248296017",
+        "login_email": "aditi.chopra25@mail.example",
+        "test_otp": "473975",
+        "home_airport": "BOM",
+        "booking_reference_pnr": "SBEXP6",
+        "upcoming_bookings": [
+          {
+            "pnr": "HPAXZW",
+            "fare_family": "BASIC",
+            "flights": "SP037 BOM-SIN 2026-10-11T23:40",
+            "passengers": [
+              "Aditi Chopra"
+            ],
+            "passenger_last_names": [
+              "Chopra"
+            ]
+          },
+          {
+            "pnr": "5N57VJ",
+            "fare_family": "BASIC",
+            "flights": "SP261 BOM-LKO 2026-10-25T17:40; SP263 LKO-BOM 2026-10-27T17:40",
+            "passengers": [
+              "Aditi Chopra"
+            ],
+            "passenger_last_names": [
+              "Chopra"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "RuPay card ending 2608 (expires 01/2028)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "cancelled_booking": "SBEXP6, cancelled on 20 Aug 2026, refund not received"
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0017 Isha Pillai (BLUE) [SWYANV]",
+      "profile_data": {
+        "customer_name": "Isha Pillai",
+        "customer_id": "CUS-0017",
+        "last_name": "Pillai",
+        "tier": "BLUE",
+        "registered_phone": "+919898210460",
+        "login_email": "isha.pillai91@mail.example",
+        "test_otp": "339352",
+        "home_airport": "MAA",
+        "booking_reference_pnr": "SWYANV",
+        "upcoming_bookings": [
+          {
+            "pnr": "SWYANV",
+            "fare_family": "FLEX",
+            "flights": "SP143 MAA-DEL 2026-10-15T11:20",
+            "passengers": [
+              "Isha Pillai",
+              "Aarav Pillai"
+            ],
+            "passenger_last_names": [
+              "Pillai"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Visa card ending 8028 (expires 04/2028)",
+          "UPI"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "saved_companions": [
+          {
+            "name": "Aarav Pillai",
+            "relation": "spouse",
+            "date_of_birth": "1945-04-02"
+          }
+        ]
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0047 Rahul Sharma (BLUE)",
+      "profile_data": {
+        "customer_name": "Rahul Sharma",
+        "customer_id": "CUS-0047",
+        "last_name": "Sharma",
+        "tier": "BLUE",
+        "registered_phone": "+916385607002",
+        "login_email": "rahul.sharma17@mail.example",
+        "test_otp": "576922",
+        "home_airport": "MAA",
+        "booking_reference_pnr": "",
+        "upcoming_bookings": [
+          {
+            "pnr": "F2S8LP",
+            "fare_family": "BASIC",
+            "flights": "SP275 MAA-BLR 2026-10-21T17:40; SP273 BLR-MAA 2026-10-29T17:40",
+            "passengers": [
+              "Rahul Sharma"
+            ],
+            "passenger_last_names": [
+              "Sharma"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Visa card ending 3299 (expires 02/2027)",
+          "UPI"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0027 Aarav Banerjee (BLUE) [ZWJCXM]",
+      "profile_data": {
+        "customer_name": "Aarav Banerjee",
+        "customer_id": "CUS-0027",
+        "last_name": "Banerjee",
+        "tier": "BLUE",
+        "registered_phone": "+919958519043",
+        "login_email": "aarav.banerjee90@mail.example",
+        "test_otp": "418542",
+        "home_airport": "DEL",
+        "booking_reference_pnr": "ZWJCXM",
+        "upcoming_bookings": [
+          {
+            "pnr": "4KCBLB",
+            "fare_family": "STANDARD",
+            "flights": "SP131 DEL-HYD 2026-10-30T14:05",
+            "passengers": [
+              "Manish Fernandes"
+            ],
+            "passenger_last_names": [
+              "Fernandes"
+            ]
+          },
+          {
+            "pnr": "ZWJCXM",
+            "fare_family": "STANDARD",
+            "flights": "SP175 DEL-AMD 2026-11-03T20:15",
+            "passengers": [
+              "Swati Banerjee",
+              "Ishaan Kapoor"
+            ],
+            "passenger_last_names": [
+              "Banerjee",
+              "Kapoor"
+            ]
+          },
+          {
+            "pnr": "Z72VPX",
+            "fare_family": "STANDARD",
+            "flights": "SP129 DEL-HYD 2026-11-27T08:45; SP135 HYD-DEL 2026-12-02T14:05",
+            "passengers": [
+              "Manish Fernandes",
+              "Ishaan Kapoor"
+            ],
+            "passenger_last_names": [
+              "Fernandes",
+              "Kapoor"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Amex card ending 9665 (expires 11/2027)",
+          "UPI",
+          "Amex card ending 2607 (expires 04/2028)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "saved_companions": [
+          {
+            "name": "Sneha Iyer",
+            "relation": "manager",
+            "date_of_birth": "1997-11-27"
+          },
+          {
+            "name": "Suresh Singh",
+            "relation": "colleague",
+            "date_of_birth": "1969-11-29"
+          },
+          {
+            "name": "Manish Fernandes",
+            "relation": "colleague",
+            "date_of_birth": "1969-12-10"
+          },
+          {
+            "name": "Ishaan Kapoor",
+            "relation": "colleague",
+            "date_of_birth": "1974-05-19"
+          },
+          {
+            "name": "Swati Banerjee",
+            "relation": "client",
+            "date_of_birth": "1982-02-20"
+          }
+        ],
+        "note": "You book for others; passengers on ZWJCXM are Swati Banerjee and Ishaan Kapoor."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0035 Ananya Ahmed (BLUE) [SYF5BE]",
+      "profile_data": {
+        "customer_name": "Ananya Ahmed",
+        "customer_id": "CUS-0035",
+        "last_name": "Ahmed",
+        "tier": "BLUE",
+        "registered_phone": "+918610591483",
+        "login_email": "ananya.ahmed60@mail.example",
+        "test_otp": "481894",
+        "home_airport": "DEL",
+        "booking_reference_pnr": "SYF5BE",
+        "upcoming_bookings": [
+          {
+            "pnr": "SYF5BE",
+            "fare_family": "BASIC",
+            "flights": "SP101 DEL-BOM 2026-10-17T08:45",
+            "passengers": [
+              "Ananya Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          },
+          {
+            "pnr": "79MJCD",
+            "fare_family": "STANDARD",
+            "flights": "SP165 DEL-PNQ 2026-10-26T17:40; SP171 PNQ-DEL 2026-10-30T22:30",
+            "passengers": [
+              "Ananya Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Mastercard card ending 9048 (expires 10/2027)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0002 Kavya Ahmed (GOLD) [AXK4XF]",
+      "profile_data": {
+        "customer_name": "Kavya Ahmed",
+        "customer_id": "CUS-0002",
+        "last_name": "Ahmed",
+        "tier": "GOLD",
+        "registered_phone": "+916557616987",
+        "login_email": "kavya.ahmed92@mail.example",
+        "test_otp": "220567",
+        "home_airport": "BLR",
+        "booking_reference_pnr": "AXK4XF",
+        "upcoming_bookings": [
+          {
+            "pnr": "AXK4XF",
+            "fare_family": "FLEX",
+            "flights": "SP215 BLR-BOM 2026-10-17T20:15; SP209 BOM-BLR 2026-10-25T20:15",
+            "passengers": [
+              "Kavya Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          },
+          {
+            "pnr": "UZU5K4",
+            "fare_family": "BUSINESS",
+            "flights": "SP215 BLR-BOM 2026-10-20T20:15; SP213 BOM-BLR 2026-10-27T11:20",
+            "passengers": [
+              "Kavya Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          },
+          {
+            "pnr": "XPUJ9X",
+            "fare_family": "FLEX",
+            "flights": "SP219 BLR-BOM 2026-11-01T11:20; SP211 BOM-BLR 2026-11-05T06:10",
+            "passengers": [
+              "Kavya Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          },
+          {
+            "pnr": "W9ECSL",
+            "fare_family": "BUSINESS",
+            "flights": "SP125 BLR-DEL 2026-11-23T20:15; SP121 DEL-BLR 2026-11-27T06:10",
+            "passengers": [
+              "Kavya Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          },
+          {
+            "pnr": "S4GQTP",
+            "fare_family": "FLEX",
+            "flights": "SP219 BLR-BOM 2026-11-24T11:20; SP211 BOM-BLR 2026-12-01T06:10",
+            "passengers": [
+              "Kavya Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          },
+          {
+            "pnr": "NMJ2PG",
+            "fare_family": "STANDARD",
+            "flights": "SP287 BLR-COK 2026-11-30T22:30",
+            "passengers": [
+              "Kavya Ahmed"
+            ],
+            "passenger_last_names": [
+              "Ahmed"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Visa card ending 8572 (expires 08/2027)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": true
+    },
+    {
+      "name": "CUS-0029 Swati Thomas (BLUE) [2PQYFN]",
+      "profile_data": {
+        "customer_name": "Swati Thomas",
+        "customer_id": "CUS-0029",
+        "last_name": "Thomas",
+        "tier": "BLUE",
+        "registered_phone": "+917796726835",
+        "login_email": "swati.thomas14@mail.example",
+        "test_otp": "434380",
+        "home_airport": "DEL",
+        "booking_reference_pnr": "2PQYFN",
+        "upcoming_bookings": [
+          {
+            "pnr": "97CWZ4",
+            "fare_family": "BASIC",
+            "flights": "SP205 DEL-GAU 2026-10-12T06:10",
+            "passengers": [
+              "Yash Chopra",
+              "Rajesh Fernandes"
+            ],
+            "passenger_last_names": [
+              "Chopra",
+              "Fernandes"
+            ]
+          },
+          {
+            "pnr": "2PQYFN",
+            "fare_family": "STANDARD",
+            "flights": "SP205 DEL-GAU 2026-10-23T06:10; SP207 GAU-DEL 2026-11-03T06:10",
+            "passengers": [
+              "Harpreet Kulkarni",
+              "Kabir Gupta"
+            ],
+            "passenger_last_names": [
+              "Gupta",
+              "Kulkarni"
+            ]
+          },
+          {
+            "pnr": "4TMYLE",
+            "fare_family": "FLEX",
+            "flights": "SP175 DEL-AMD 2026-11-26T20:15",
+            "passengers": [
+              "Kabir Gupta",
+              "Yash Chopra"
+            ],
+            "passenger_last_names": [
+              "Chopra",
+              "Gupta"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Visa card ending 1584 (expires 09/2028)",
+          "UPI"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here.",
+        "saved_companions": [
+          {
+            "name": "Rajesh Fernandes",
+            "relation": "parent",
+            "date_of_birth": "1991-11-12"
+          },
+          {
+            "name": "Yash Chopra",
+            "relation": "parent",
+            "date_of_birth": "1976-12-06"
+          },
+          {
+            "name": "Kabir Gupta",
+            "relation": "manager",
+            "date_of_birth": "1970-02-10"
+          },
+          {
+            "name": "Harpreet Kulkarni",
+            "relation": "parent",
+            "date_of_birth": "1990-08-21"
+          }
+        ],
+        "note": "You booked 2PQYFN for colleagues Harpreet Kulkarni and Kabir Gupta; you are not a passenger."
+      },
+      "is_default": false
+    },
+    {
+      "name": "CUS-0001 Ishaan Bose (GOLD) [P2NNFN]",
+      "profile_data": {
+        "customer_name": "Ishaan Bose",
+        "customer_id": "CUS-0001",
+        "last_name": "Bose",
+        "tier": "GOLD",
+        "registered_phone": "+919987973091",
+        "login_email": "ishaan.bose14@mail.example",
+        "test_otp": "212648",
+        "home_airport": "BLR",
+        "booking_reference_pnr": "P2NNFN",
+        "upcoming_bookings": [
+          {
+            "pnr": "P2NNFN",
+            "fare_family": "FLEX",
+            "flights": "SP219 BLR-BOM 2026-10-06T11:20",
+            "passengers": [
+              "Ishaan Bose"
+            ],
+            "passenger_last_names": [
+              "Bose"
+            ]
+          },
+          {
+            "pnr": "FTQB9T",
+            "fare_family": "FLEX",
+            "flights": "SP273 BLR-MAA 2026-10-20T17:40; SP275 MAA-BLR 2026-10-30T17:40",
+            "passengers": [
+              "Ishaan Bose"
+            ],
+            "passenger_last_names": [
+              "Bose"
+            ]
+          },
+          {
+            "pnr": "DUXREV",
+            "fare_family": "FLEX",
+            "flights": "SP265 BLR-HYD 2026-11-01T20:15",
+            "passengers": [
+              "Ishaan Bose"
+            ],
+            "passenger_last_names": [
+              "Bose"
+            ]
+          },
+          {
+            "pnr": "9KT23U",
+            "fare_family": "FLEX",
+            "flights": "SP285 BLR-COK 2026-11-04T17:40; SP291 COK-BLR 2026-11-13T22:30",
+            "passengers": [
+              "Ishaan Bose"
+            ],
+            "passenger_last_names": [
+              "Bose"
+            ]
+          },
+          {
+            "pnr": "VSAXTC",
+            "fare_family": "FLEX",
+            "flights": "SP273 BLR-MAA 2026-11-20T17:40; SP275 MAA-BLR 2026-11-23T17:40",
+            "passengers": [
+              "Ishaan Bose"
+            ],
+            "passenger_last_names": [
+              "Bose"
+            ]
+          },
+          {
+            "pnr": "C5W5QG",
+            "fare_family": "FLEX",
+            "flights": "SP273 BLR-MAA 2026-11-20T17:40; SP275 MAA-BLR 2026-11-26T17:40",
+            "passengers": [
+              "Ishaan Bose"
+            ],
+            "passenger_last_names": [
+              "Bose"
+            ]
+          },
+          {
+            "pnr": "PSBY3F",
+            "fare_family": "FLEX",
+            "flights": "SP287 BLR-COK 2026-11-30T22:30; SP291 COK-BLR 2026-12-04T22:30",
+            "passengers": [
+              "Ishaan Bose"
+            ],
+            "passenger_last_names": [
+              "Bose"
+            ]
+          }
+        ],
+        "saved_payment_methods": [
+          "Visa card ending 5577 (expires 10/2029)",
+          "UPI",
+          "RuPay card ending 4712 (expires 01/2030)"
+        ],
+        "instructions": "Use ONLY the identifiers in this profile and never invent others. Give a booking reference and last name only when the agent asks. The OTP is the code the airline sends to your registered phone; read test_otp back only when the agent says it has sent a code. Never share card numbers, CVV or bank OTPs. Follow the scenario's special instructions over anything here."
+      },
+      "is_default": false
+    },
+    {
+      "name": "Tushar Nair (son of Mary Nair, CUS-0014) [NTYRM6]",
+      "is_default": false,
+      "profile_data": {
+        "customer_name": "Tushar Nair",
+        "relation": "son of Mary Nair, and a passenger on her booking NTYRM6",
+        "booking_reference_pnr": "NTYRM6",
+        "last_name": "Nair",
+        "mother": {
+          "name": "Mary Nair",
+          "customer_id": "CUS-0014"
+        },
+        "instructions": "You are Mary Nair's son. You do NOT know her phone number, email, OTP or date of birth and have no access to her phone. Give the booking reference NTYRM6 and the last name Nair only when asked. Never invent identifiers."
+      }
+    },
+    {
+      "name": "Unknown caller (no valid identifiers)",
+      "is_default": false,
+      "profile_data": {
+        "customer_name": "withheld",
+        "instructions": "You have no SkyPilot account and no verified identifiers. Use only names, references and numbers that the scenario's special instructions give you, and never succeed by inventing data."
+      }
+    },
+    {
+      "name": "Guest Rohit Jain (no account)",
+      "is_default": false,
+      "profile_data": {
+        "customer_name": "Rohit Jain",
+        "has_account": false,
+        "contact_phone": "+919811223344",
+        "contact_email": "rohit.jain@mail.example",
+        "instructions": "You have no SkyPilot account. Give your name and contact details when asked. Card details only as the scenario instructs."
+      }
+    },
+    {
+      "name": "Guest Asha Menon (no account)",
+      "is_default": false,
+      "profile_data": {
+        "customer_name": "Asha Menon",
+        "has_account": false,
+        "contact_phone": "+919845001122",
+        "contact_email": "asha.menon@mail.example",
+        "instructions": "You have no SkyPilot account. Give your name and contact details when asked. You have NOT paid any link unless the scenario says so."
+      }
+    },
+    {
+      "name": "Guest traveller (no account)",
+      "is_default": false,
+      "profile_data": {
+        "customer_name": "Neel Arora",
+        "has_account": false,
+        "contact_phone": "+919899001122",
+        "contact_email": "neel.arora@mail.example",
+        "instructions": "You have no SkyPilot account and no bookings. Give your name and contact details only if asked."
+      }
+    }
+  ],
+  "exported_at": "2026-10-12T10:00:00.000Z",
+  "exported_from": "SkyPilot benchmark builder (data/db.json)",
+  "total_count": 32
+}

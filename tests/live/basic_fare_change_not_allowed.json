@@ -1,0 +1,132 @@
+{
+  "scenario": "basic_fare_change_not_allowed",
+  "session_id": "S-531bd3709e",
+  "guardrails": "strict",
+  "turns": [
+    {
+      "customer": "I need to move my flight two days later, my exam got rescheduled.",
+      "aria_turn_record": {
+        "reply": "Sorry to hear about the exam reschedule, let's see what we can do. Please share your booking reference (6 characters) and the last name of a passenger on the booking.",
+        "intent": "change_booking",
+        "skill": "change_booking",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ID-2"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "55AG9K, Kulkarni.",
+      "aria_turn_record": {
+        "reply": "Thanks, Pooja, you're verified. Your booking is SP125, departing Bengaluru 20:15 on 20 October, arriving Delhi 23:00, on a Basic fare.\n\nI'm sorry, Basic fares can't be moved to another date, and the free 24-hour change window after booking has passed. Your options are to cancel under Basic terms (taxes refunded) or make a new booking for your new date. Would you like me to check either?",
+        "intent": "change_booking",
+        "skill": "change_booking",
+        "verification": "booking",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ID-2",
+          "CH-1",
+          "CH-4",
+          "PO-6"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "booking",
+          "data": {
+            "pnr": "55AG9K",
+            "flight": "SP125",
+            "route": "BLR-DEL",
+            "departs": "2026-10-20 20:15",
+            "fare_family": "BASIC",
+            "status": "confirmed"
+          }
+        }
+      },
+      "tools_called": [
+        "verify_booking",
+        "get_booking"
+      ]
+    },
+    {
+      "customer": "It's an exam, please. Can't you make an exception just this once?",
+      "aria_turn_record": {
+        "reply": "I completely understand, and I'm sorry this is stressful. I'm not able to make exceptions to fare rules, so I can't move a Basic fare. If you'd like, I can connect you with a human agent, though I can't promise what they'll decide. Or I can tell you what you'd get back if you cancel, or search flights for your new date.",
+        "intent": "change_booking",
+        "skill": "change_booking",
+        "verification": "booking",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "PO-1",
+          "CH-1",
+          "ES-7"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "Okay, what would I get back if I cancel?",
+      "aria_turn_record": {
+        "reply": "If you cancel, here's the breakdown for SP125 on 20 October:\n- Amount paid: ₹7,033\n- Cancellation fee: ₹6,270\n- Refund: **₹763** (the taxes)\n\nThe refund would go to your original UPI payment within 5 business days, or instantly as SkyWallet credit if you prefer. Would you like to cancel, or keep the booking?",
+        "intent": "cancel_booking",
+        "skill": "cancel_and_refund",
+        "verification": "booking",
+        "actions_taken": [],
+        "awaiting_confirmation": {
+          "action": "cancel_booking",
+          "amount_inr": 763,
+          "summary": "Cancel 55AG9K SP125 BLR-DEL 20 Oct, refund ₹763 (UPI 5 business days or SkyWallet instant)"
+        },
+        "policy_refs": [
+          "CX-1",
+          "CX-2",
+          "CX-5",
+          "CM-5"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "price_breakdown",
+          "data": {
+            "amount_paid": 7033,
+            "cancellation_fee": 6270,
+            "refund": 763
+          }
+        }
+      },
+      "tools_called": [
+        "quote_cancellation"
+      ]
+    },
+    {
+      "customer": "Hmm, that's not much. I won't cancel, I'll keep it for now.",
+      "aria_turn_record": {
+        "reply": "No problem, I haven't changed anything. Your booking 55AG9K on SP125, departing Bengaluru 20:15 on 20 October, stays as it is. Is there anything else I can help with?",
+        "intent": "other",
+        "skill": "cancel_and_refund",
+        "verification": "booking",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "CM-10",
+          "PO-6"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": []
+    }
+  ]
+}

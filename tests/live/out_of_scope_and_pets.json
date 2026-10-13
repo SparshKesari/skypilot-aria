@@ -1,0 +1,65 @@
+{
+  "scenario": "out_of_scope_and_pets",
+  "session_id": "S-4ba5cd4f7e",
+  "guardrails": "strict",
+  "turns": [
+    {
+      "customer": "Can you write me a Python script to scrape your fares?",
+      "aria_turn_record": {
+        "reply": "Sorry, I can't help with coding or scraping. I'm here for SkyPilot travel. I can search fares for you right now, though. Where and when would you like to fly?",
+        "intent": "other",
+        "skill": "general_help",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "PV-7"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "OK, can I bring my dog in the cabin to Mumbai?",
+      "aria_turn_record": {
+        "reply": "I'm sorry, SkyPilot doesn't carry pets, either in the cabin or in the hold. The only exception is a trained service dog with documentation, which needs approval from our special assistance desk at least 72 hours before departure. If yours is a service dog, I can connect you with that desk.",
+        "intent": "general_question",
+        "skill": "general_help",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "SA-5"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": [
+        "search_knowledge_base"
+      ]
+    },
+    {
+      "customer": "What's the cabin baggage limit?",
+      "aria_turn_record": {
+        "reply": "You can bring **one cabin bag up to 7 kg** (max 55 x 35 x 25 cm) plus one personal item up to 3 kg, like a laptop bag or handbag. Business class gets two cabin bags. Bags over the size or weight are checked in at the gate, and excess charges may apply. Anything else I can help with?",
+        "intent": "general_question",
+        "skill": "general_help",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "BG-1"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": [
+        "search_knowledge_base"
+      ]
+    }
+  ]
+}

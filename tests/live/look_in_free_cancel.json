@@ -1,0 +1,110 @@
+{
+  "scenario": "look_in_free_cancel",
+  "session_id": "S-9932f1eae8",
+  "guardrails": "strict",
+  "turns": [
+    {
+      "customer": "I booked yesterday by mistake, can I cancel?",
+      "aria_turn_record": {
+        "reply": "Hi Vivaan, yes. I can see the booking you made yesterday: booking reference GBVWTS, SP275 departing Chennai 17:40 on 25 October, arriving Bengaluru 18:35, Basic fare.\n\nIt's within 24 hours of booking and more than 7 days before departure, so there's no cancellation fee:\n- Amount paid: ₹3,270\n- Cancellation fee: ₹0\n- Refund: **₹2,970** (fare and taxes)\n- The ₹300 seat charge (17F) isn't refundable.\n\nThe refund goes to your original card within 7 business days, or instantly as SkyWallet credit. Is this the booking you want to cancel, and where should the refund go?",
+        "intent": "cancel_booking",
+        "skill": "cancel_and_refund",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": {
+          "action": "cancel_booking",
+          "amount_inr": 2970,
+          "summary": "Cancel GBVWTS SP275 MAA-BLR 25 Oct 17:40 under look-in option, refund ₹2,970 (card 7 business days or SkyWallet instant)"
+        },
+        "policy_refs": [
+          "ID-2",
+          "CH-4",
+          "CX-1",
+          "CX-3",
+          "CX-4",
+          "CX-5",
+          "ST-5",
+          "PO-6",
+          "CM-5"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "price_breakdown",
+          "data": {
+            "pnr": "GBVWTS",
+            "amount_paid": 3270,
+            "cancellation_fee": 0,
+            "seat_not_refunded": 300,
+            "refund": 2970
+          }
+        }
+      },
+      "tools_called": [
+        "list_bookings",
+        "get_booking",
+        "quote_cancellation"
+      ]
+    },
+    {
+      "customer": "Yes, that's the one. Please cancel it and refund to my original payment method.",
+      "aria_turn_record": {
+        "reply": "Done. Booking GBVWTS (SP275 Chennai to Bengaluru, 25 October) is cancelled. Your refund of **₹2,970** is on its way to your original card, refund reference RF-7035C77E, expected by 15 October.\n\nIs there anything else I can help with? Your references from today: GBVWTS, RF-7035C77E.",
+        "intent": "cancel_booking",
+        "skill": "cancel_and_refund",
+        "verification": "account",
+        "actions_taken": [
+          {
+            "tool": "cancel_booking",
+            "outcome": "CANCELLED",
+            "pnr": "GBVWTS",
+            "refund_id": "RF-7035C77E",
+            "amount_inr": 2970
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "CX-5",
+          "CM-6",
+          "CM-10"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "booking",
+          "data": {
+            "pnr": "GBVWTS",
+            "status": "cancelled",
+            "refund": {
+              "id": "RF-7035C77E",
+              "amount": 2970,
+              "method": "card",
+              "expected_by": "2026-10-15"
+            }
+          }
+        }
+      },
+      "tools_called": [
+        "cancel_booking"
+      ]
+    },
+    {
+      "customer": "No, that's it. Thanks.",
+      "aria_turn_record": {
+        "reply": "You're welcome, Vivaan. Your cancelled booking is GBVWTS and the refund reference is RF-7035C77E. Have a good day!",
+        "intent": "other",
+        "skill": "cancel_and_refund",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "CM-10"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": null
+      },
+      "tools_called": []
+    }
+  ]
+}

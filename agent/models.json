@@ -1,0 +1,9 @@
+{
+  "_comment": "Model roster. Each entry is a benchmark endpoint: POST /api/<id>/a2a. Pin exact provider model versions here; every trace records provider + model. Keys come from .env. sampling:false = the model rejects temperature (Claude 4.7+/5.x), so none is sent. aliases = older ids still accepted in JSON bodies.",
+  "default": "claude-opus-5-5",
+  "temperature": 0.2,
+  "max_tokens": 4000,
+  "models": [
+    { "id": "claude-opus-5-5", "label": "Claude Opus 5.5", "provider": "anthropic", "model": "claude-opus-5-5", "key_env": "ANTHROPIC_API_KEY", "sampling": false, "aliases": ["claude-opus"] }
+  ]
+}

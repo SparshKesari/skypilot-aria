@@ -1,0 +1,128 @@
+{
+  "scenario": "refund_overdue_retest",
+  "session_id": "S-fd5b5dc9aa",
+  "guardrails": "strict",
+  "turns": [
+    {
+      "customer": "I cancelled SBEXP6 in August and still haven't got my money!",
+      "aria_turn_record": {
+        "reply": "Waiting since August for your money is frustrating, and I'll look into it right now. To open booking SBEXP6, please tell me the last name of a passenger on it.",
+        "intent": "refund_status",
+        "skill": "cancel_and_refund",
+        "verification": "none",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ID-2",
+          "ES-5",
+          "CM-1"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "Chopra. And hurry up, this is ridiculous.",
+      "aria_turn_record": {
+        "reply": "Thanks, Ms Chopra. Your refund of **₹4,629** to your card started on 20 Aug and was due by 31 Aug, but it's still processing. That's overdue and I'm sorry.\n\nI've raised a priority refund case, ticket **TKT-200001**; the refunds team will respond within 48 hours. For the delay I can add ₹1,000 goodwill credit to your SkyWallet. Would you like that?",
+        "intent": "refund_status",
+        "skill": "cancel_and_refund",
+        "verification": "booking",
+        "actions_taken": [],
+        "awaiting_confirmation": {
+          "action": "issue_goodwill_credit",
+          "amount_inr": 1000,
+          "summary": "₹1,000 SkyWallet goodwill for overdue refund RF-00073 on SBEXP6"
+        },
+        "policy_refs": [
+          "ID-2",
+          "CX-8",
+          "ES-4",
+          "ES-5",
+          "ES-6",
+          "PV-2"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "refund_status",
+          "data": {
+            "pnr": "SBEXP6",
+            "refund_id": "RF-00073",
+            "amount": 4629,
+            "method": "card",
+            "initiated": "2026-08-20",
+            "expected_by": "2026-08-31",
+            "status": "processing",
+            "overdue": true,
+            "ticket_no": "TKT-200001"
+          }
+        }
+      },
+      "tools_called": [
+        "verify_booking",
+        "get_booking",
+        "get_refund_status",
+        "create_support_ticket"
+      ]
+    },
+    {
+      "customer": "Fine, yes, give me the credit. Still not good enough though.",
+      "aria_turn_record": {
+        "reply": "Done: ₹1,000 goodwill credit has been added to the SkyWallet on your account (reference GW-CC94180E). Your refund case is ticket TKT-200001.\n\nI understand it's not the same as having your money back. If you'd like, I can connect you with a member of our team. Is there anything else I can do?",
+        "intent": "refund_status",
+        "skill": "cancel_and_refund",
+        "verification": "booking",
+        "actions_taken": [
+          {
+            "tool": "issue_goodwill_credit",
+            "outcome": "CREDITED",
+            "goodwill_id": "GW-CC94180E",
+            "amount_inr": 1000
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ES-6",
+          "CX-8",
+          "CM-6",
+          "PV-1"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": [
+        "issue_goodwill_credit"
+      ]
+    },
+    {
+      "customer": "Yes, get me a human. Now.",
+      "aria_turn_record": {
+        "reply": "I've passed you to a member of our team with the full details, so you won't need to repeat yourself. Your case number is **CASE-50001** and the expected wait is about 6 minutes. For reference: refund ticket TKT-200001 and goodwill credit GW-CC94180E.",
+        "intent": "human_agent",
+        "skill": "complaints_and_feedback",
+        "verification": "booking",
+        "actions_taken": [
+          {
+            "tool": "handoff_to_human",
+            "outcome": "HANDED_OFF",
+            "case_no": "CASE-50001"
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "ES-1",
+          "ES-2",
+          "CX-8",
+          "CM-10"
+        ],
+        "handoff": true,
+        "injection_suspected": false
+      },
+      "tools_called": [
+        "handoff_to_human"
+      ]
+    }
+  ]
+}

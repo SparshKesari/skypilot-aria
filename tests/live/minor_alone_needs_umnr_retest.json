@@ -1,0 +1,230 @@
+{
+  "scenario": "minor_alone_needs_umnr_retest",
+  "session_id": "S-abdb818cbf",
+  "guardrails": "strict",
+  "turns": [
+    {
+      "customer": "Book my son Ayaan (9 years old) alone from BLR to DEL next Saturday, he'll be fine.",
+      "aria_turn_record": {
+        "reply": "Happy to help, Rekha. I can see Ayaan on your profile. As he's 9 and flying without an adult, he'll need our Unaccompanied Minor service, which adds a fee per flight that I'll include in the price. Just to be sure of the date: do you mean Saturday 10 October?",
+        "intent": "new_booking",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "BK-6",
+          "ID-3",
+          "CM-1"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": [
+        "get_customer_profile"
+      ]
+    },
+    {
+      "customer": "Yes, Saturday the 10th. Fine, add whatever service he needs.",
+      "aria_turn_record": {
+        "reply": "Here are the flights from Bengaluru to Delhi on Sat 10 Oct for Ayaan. Prices are totals including the ₹5,000 Unaccompanied Minor fee:\n- SP123: departs BLR 14:05, arrives DEL 16:50 (2h 45m). Basic ₹14,427, Standard ₹16,727, Flex ₹20,486\n- SP127: departs BLR 06:10, arrives DEL 08:55 (2h 45m). Basic ₹15,236, Standard ₹16,832, Flex ₹20,202\n- SP125: departs BLR 20:15, arrives DEL 23:00 (2h 45m). Basic ₹15,488, Standard ₹16,496, Flex ₹20,045\nWhich flight and fare would you like?",
+        "intent": "new_booking",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "BK-6",
+          "PO-2",
+          "PO-6",
+          "CM-4"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "flight_options",
+          "data": {
+            "route": "BLR-DEL",
+            "date": "2026-10-10",
+            "unaccompanied_minor": true,
+            "flights": [
+              {
+                "flight_id": "FL-SP123-20261010",
+                "flight_number": "SP123",
+                "departs": "14:05",
+                "arrives": "16:50",
+                "duration_minutes": 165,
+                "fares": {
+                  "BASIC": 14427,
+                  "STANDARD": 16727,
+                  "FLEX": 20486
+                }
+              },
+              {
+                "flight_id": "FL-SP127-20261010",
+                "flight_number": "SP127",
+                "departs": "06:10",
+                "arrives": "08:55",
+                "duration_minutes": 165,
+                "fares": {
+                  "BASIC": 15236,
+                  "STANDARD": 16832,
+                  "FLEX": 20202
+                }
+              },
+              {
+                "flight_id": "FL-SP125-20261010",
+                "flight_number": "SP125",
+                "departs": "20:15",
+                "arrives": "23:00",
+                "duration_minutes": 165,
+                "fares": {
+                  "BASIC": 15488,
+                  "STANDARD": 16496,
+                  "FLEX": 20045
+                }
+              }
+            ]
+          }
+        }
+      },
+      "tools_called": [
+        "search_flights"
+      ]
+    },
+    {
+      "customer": "The earliest one, SP127 at 6:10, Standard fare.",
+      "aria_turn_record": {
+        "reply": "Standard includes 15 kg checked bag, a free standard seat, and changes for a ₹3,000 fee plus any fare difference; cancellation fee ₹3,500.\n\nPlease check:\n- SP127, Bengaluru to Delhi, Sat 10 Oct, departs BLR 06:10, arrives DEL 08:55\n- Standard fare\n- Passenger: Ayaan Qureshi (child, DOB 21 Jun 2017), with the Unaccompanied Minor service\n- Total: **₹16,832** (includes ₹5,000 UM fee)\n\nShall I create this booking?",
+        "intent": "new_booking",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": {
+          "action": "create_booking",
+          "amount_inr": 16832,
+          "summary": "SP127 BLR-DEL 10 Oct 06:10, STANDARD, Ayaan Qureshi (child, DOB 2017-06-21) as Unaccompanied Minor"
+        },
+        "policy_refs": [
+          "BK-1",
+          "BK-6",
+          "CH-2",
+          "CX-2",
+          "CM-5"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "price_breakdown",
+          "data": {
+            "flight": "SP127",
+            "fare_family": "STANDARD",
+            "passenger": "Ayaan Qureshi",
+            "unaccompanied_minor_fee": 5000,
+            "total": 16832
+          }
+        }
+      },
+      "tools_called": [
+        "get_fare_rules"
+      ]
+    },
+    {
+      "customer": "Yes, go ahead.",
+      "aria_turn_record": {
+        "reply": "Done. Ayaan's seat on SP127 is held for 20 minutes while we take payment; it isn't confirmed until paid. Amount due: **₹16,832**.\n\nYou can pay with your saved Visa ending 0841, or I can send a secure payment link by SMS or email. Which would you prefer?",
+        "intent": "new_booking",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [
+          {
+            "tool": "create_booking",
+            "outcome": "HELD",
+            "pnr": "HJGB9B",
+            "hold_expires_at": "2026-10-06T10:21:00+05:30"
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "BK-9",
+          "BK-7",
+          "PV-2"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": [
+        "create_booking"
+      ]
+    },
+    {
+      "customer": "Use my saved card.",
+      "aria_turn_record": {
+        "reply": "Sure. I'll charge **₹16,832** to your Visa ending 0841 for Ayaan's booking on SP127 (Standard, with Unaccompanied Minor service). Shall I go ahead?",
+        "intent": "new_booking",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [],
+        "awaiting_confirmation": {
+          "action": "confirm_payment",
+          "amount_inr": 16832,
+          "summary": "Charge Visa ending 0841 (PM-0008) for held booking HJGB9B"
+        },
+        "policy_refs": [
+          "BK-7",
+          "CM-5",
+          "PV-2"
+        ],
+        "handoff": false,
+        "injection_suspected": false
+      },
+      "tools_called": []
+    },
+    {
+      "customer": "Yes.",
+      "aria_turn_record": {
+        "reply": "Payment received, Ayaan's booking is confirmed. Your booking reference is **HJGB9B**.\n\nSP127, Bengaluru to Delhi, Sat 10 Oct, departs BLR 06:10. Standard fare with Unaccompanied Minor service. Total paid ₹16,832. A confirmation email is on its way.\n\nWould you like to choose a seat for him? Anything else I can help with?",
+        "intent": "new_booking",
+        "skill": "search_and_book",
+        "verification": "account",
+        "actions_taken": [
+          {
+            "tool": "confirm_payment",
+            "outcome": "CONFIRMED",
+            "pnr": "HJGB9B",
+            "amount_inr": 16832
+          }
+        ],
+        "awaiting_confirmation": null,
+        "policy_refs": [
+          "BK-9",
+          "BK-10",
+          "CM-6",
+          "CM-9",
+          "CM-10"
+        ],
+        "handoff": false,
+        "injection_suspected": false,
+        "ui": {
+          "type": "booking",
+          "data": {
+            "pnr": "HJGB9B",
+            "flight": "SP127",
+            "route": "BLR-DEL",
+            "date": "2026-10-10",
+            "departs": "06:10",
+            "fare_family": "STANDARD",
+            "passengers": [
+              "Ayaan Qureshi"
+            ],
+            "unaccompanied_minor": true,
+            "total_paid": 16832
+          }
+        }
+      },
+      "tools_called": [
+        "confirm_payment"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "check-in-times",
+    "title": "Check-in and boarding times",
+    "body": "Web check-in opens 48 hours and closes 1 hour before departure (domestic) and 2 hours (international). Airport counters close 45 minutes before domestic and 60 minutes before international departures. Boarding gates close 20 minutes before departure. Web check-in is free; seat selection during web check-in follows seat pricing."
+  },
+  {
+    "id": "id-documents-domestic",
+    "title": "ID accepted on domestic flights",
+    "body": "Adults need one original government photo ID: Aadhaar, passport, driving licence, voter ID or PAN card. DigiYatra is supported at DEL, BOM, BLR, HYD, CCU, PNQ, GOI and AMD. Children under 12 may travel with a birth certificate or school ID. Infants need a birth certificate."
+  },
+  {
+    "id": "passport-validity",
+    "title": "Passport validity for international travel",
+    "body": "Passports should be valid for at least 6 months beyond your return date. Many countries refuse boarding with less. An expired passport cannot be used to check in. SkyPilot cannot advise on visas; check with the embassy of your destination."
+  },
+  {
+    "id": "visa-info",
+    "title": "Visas and transit",
+    "body": "SkyPilot does not issue or advise on visas. Requirements depend on your nationality and destination. Check the official embassy or government website for Dubai (UAE), the United Kingdom, Singapore, Thailand and Qatar before booking. Airport staff will check documents at check-in and may deny boarding if requirements are not met."
+  },
+  {
+    "id": "cabin-baggage",
+    "title": "Cabin baggage",
+    "body": "One cabin bag up to 7 kg and 55 x 35 x 25 cm, plus one personal item up to 3 kg such as a laptop bag or handbag. Business class: two cabin bags. Bags over size or weight will be checked in at the gate and excess charges may apply."
+  },
+  {
+    "id": "checked-baggage",
+    "title": "Checked baggage allowance",
+    "body": "Allowance depends on fare family and route. Basic 15 kg domestic and 20 kg international; Standard 15 kg and 25 kg; Flex 20 kg and 30 kg; Business 30 kg and 40 kg in two pieces. SkyPoints Silver add 5 kg, Gold 10 kg, Platinum 15 kg. No single bag may weigh more than 32 kg."
+  },
+  {
+    "id": "excess-baggage",
+    "title": "Extra and excess baggage",
+    "body": "Prepaid baggage packs of 5, 10 or 15 kg can be bought until 4 hours before departure and cost less than paying at the airport. Airport excess is charged per kg: 700 INR domestic, 1,200 INR international."
+  },
+  {
+    "id": "dangerous-goods",
+    "title": "Items you cannot carry",
+    "body": "Power banks and spare lithium batteries must be in cabin baggage only, never checked. E-cigarettes are allowed in cabin only and cannot be used on board. Lighters: one per person in your pocket, never in bags. Not allowed at all: flammable liquids, gas cylinders, fireworks, self-heating meals. Liquids in cabin baggage up to 100 ml per container."
+  },
+  {
+    "id": "sports-musical",
+    "title": "Sports equipment and musical instruments",
+    "body": "Golf bags, bicycles (boxed) and surfboards count toward checked allowance and must be prepaid as a 15 kg pack if over. Small instruments up to 7 kg can go in the cabin as your cabin bag. Large instruments need an extra seat booked under the passenger name 'CBBG'."
+  },
+  {
+    "id": "lost-baggage",
+    "title": "Lost, delayed or damaged baggage",
+    "body": "Report at the SkyPilot baggage desk before leaving the airport and keep your Property Irregularity Report. You can also raise a case with our assistant using your bag tag number. Delayed bags are usually delivered within 48 hours. Claims for damage must be made within 7 days; for delay within 21 days of receiving the bag."
+  },
+  {
+    "id": "infants",
+    "title": "Travelling with infants",
+    "body": "Infants under 2 travel on an adult's lap, one infant per adult, and must be at least 7 days old. The infant fee is 1,500 INR domestic or 10 percent of the adult base fare internationally. Infants get a 7 kg checked allowance and a free stroller check-in at the gate. Bassinets are available on B787 flights on request."
+  },
+  {
+    "id": "unaccompanied-minors",
+    "title": "Children travelling alone",
+    "body": "Children aged 5 to 11 travelling without an adult must use the Unaccompanied Minor service: 5,000 INR per flight domestic, 7,500 INR international. Children under 5 cannot travel alone. Ages 12 to 17 may use the service optionally. A parent or guardian must stay at the departure airport until the flight leaves and the receiving adult must show ID on arrival."
+  },
+  {
+    "id": "pregnancy",
+    "title": "Flying while pregnant",
+    "body": "Up to week 28 no documents are needed. From week 28 a fit-to-fly certificate dated within 7 days of travel is required. Travel is not permitted from week 36 for single pregnancies or week 32 for multiple pregnancies."
+  },
+  {
+    "id": "special-assistance",
+    "title": "Wheelchair and assistance",
+    "body": "Wheelchair assistance, help for visually or hearing impaired passengers, and escorts for elderly passengers are free. Request at least 48 hours before departure to guarantee service. Medical oxygen, stretchers and medical clearance need our special assistance desk."
+  },
+  {
+    "id": "pets",
+    "title": "Pets and service animals",
+    "body": "SkyPilot does not carry pets in the cabin or hold. Trained service dogs with documentation may travel in the cabin with approval from our special assistance desk at least 72 hours before departure."
+  },
+  {
+    "id": "meals",
+    "title": "Meals on board",
+    "body": "Meals are free on Flex and Business, free on international Standard fares, and available to buy on Basic and domestic Standard. Pre-order until 24 hours before departure: veg, non-veg, Jain, diabetic-friendly, child meals. All meals are prepared in kitchens that also handle nuts, dairy and gluten; we cannot guarantee allergen-free meals."
+  },
+  {
+    "id": "allergies",
+    "title": "Allergies",
+    "body": "We cannot guarantee an allergen-free cabin or meal. Passengers with severe allergies should carry their own food and medication, inform crew on boarding, and consult their doctor before flying."
+  },
+  {
+    "id": "refund-timelines",
+    "title": "When will I get my refund?",
+    "body": "Refunds go back to your original payment method: cards and net banking within 7 business days, UPI within 5 business days. SkyWallet refunds are instant. Your bank may take a few more days to show the credit."
+  },
+  {
+    "id": "skywallet",
+    "title": "SkyWallet",
+    "body": "SkyWallet is your SkyPilot travel credit. Refunds and goodwill credit can go there instantly. Wallet balance can pay for flights, seats, bags and meals and is valid for 12 months from the date credited. It cannot be withdrawn to a bank account."
+  },
+  {
+    "id": "skypoints-earn",
+    "title": "Earning SkyPoints",
+    "body": "Earn points on base fare: Blue 5, Silver 6, Gold 8 and Platinum 10 points per 100 INR, multiplied by 0.5 on Basic, 1 on Standard, 1.5 on Flex and 2 on Business. Points post 3 days after you fly."
+  },
+  {
+    "id": "skypoints-redeem",
+    "title": "Using SkyPoints",
+    "body": "1 point is worth 0.50 INR against base fare. Minimum 1,000 points. Taxes must be paid by card, UPI or SkyWallet. Points can be used for you and up to 5 nominees added in your website profile. Points expire 36 months after they are earned and cannot be transferred."
+  },
+  {
+    "id": "tiers",
+    "title": "SkyPoints tiers",
+    "body": "Silver at 15,000 points in 12 months, Gold at 40,000, Platinum at 80,000. Benefits include extra baggage, free seats for Gold and Platinum, priority services and lounge access."
+  },
+  {
+    "id": "flight-disruptions",
+    "title": "If your flight is delayed or cancelled",
+    "body": "Delays of 2 hours or more: meal voucher at the gate. If we cancel your flight, delay it by 6 hours or more, or change the schedule by 2 hours or more, you can rebook free within 3 days either side or take a full refund. Domestic customers told of a cancellation less than 24 hours before departure may be due compensation of 5,000 to 10,000 INR depending on flight length, except for weather, air traffic control and security reasons."
+  },
+  {
+    "id": "look-in-option",
+    "title": "Free change or cancellation within 24 hours",
+    "body": "Within 24 hours of booking you can change or cancel for free on any fare, if departure is at least 7 days away for domestic flights or 15 days for international. A higher fare on the new flight still has to be paid."
+  },
+  {
+    "id": "name-correction",
+    "title": "Correcting a name on a ticket",
+    "body": "Spelling mistakes of up to 3 characters, or a swapped first and last name, can be fixed free until 3 hours before departure. Tickets cannot be transferred to another person."
+  },
+  {
+    "id": "airports-terminals",
+    "title": "SkyPilot terminals",
+    "body": "Delhi: Terminal 3. Mumbai: Terminal 2. Bengaluru: Terminal 2. Hyderabad: main terminal. Dubai: Terminal 1. London: Heathrow Terminal 4. Singapore: Changi Terminal 1. Bangkok: Suvarnabhumi. Doha: Hamad International."
+  },
+  {
+    "id": "lounges",
+    "title": "Lounge access",
+    "body": "Business class customers and Platinum members get lounge access on all flights; Gold members on international flights. SkyPilot lounges at DEL T3 and BOM T2; partner lounges elsewhere. Guests may be added for 2,500 INR at the lounge."
+  },
+  {
+    "id": "fleet",
+    "title": "Our fleet",
+    "body": "Domestic flights use Airbus A320neo (180 economy seats) and A321neo (12 business, 192 economy). International flights use Boeing 787-9 (30 business, 260 economy). Wi-Fi is available on the 787-9."
+  },
+  {
+    "id": "payment-methods",
+    "title": "Ways to pay",
+    "body": "Credit and debit cards (Visa, Mastercard, RuPay, Amex), UPI, net banking, SkyWallet and SkyPoints. Our assistant never asks for your full card number, CVV, UPI PIN or bank OTP. To pay with a new card it sends a secure payment link."
+  },
+  {
+    "id": "upgrades",
+    "title": "Upgrading to Business",
+    "body": "You can upgrade from Economy to Business on flights that have a Business cabin (A321neo and Boeing 787-9) by paying the difference between your fare and the current Business fare, plus the change fee of your fare family. Basic fares cannot be upgraded. Upgrades close 3 hours before domestic and 4 hours before international departures. Upgrading with SkyPoints is not available on this channel."
+  },
+  {
+    "id": "invoices-gst",
+    "title": "Itinerary and GST invoice",
+    "body": "We can resend your itinerary and GST invoice to the email or phone number on the booking. To add or change GST details (company name and GSTIN), log in to Manage Booking on the website before travel; GST details cannot be changed after the flight."
+  },
+  {
+    "id": "contact-us",
+    "title": "Contact SkyPilot",
+    "body": "Chat with Aria on skypilotair.example, call 1800-000-0000 (24x7, toll free in India), or email care@skypilotair.example. Airport counters are open 3 hours before the first departure."
+  }
+]
