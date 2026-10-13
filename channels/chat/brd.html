@@ -48,7 +48,7 @@ a{color:var(--accent)}
 
 <h1>Business Requirements Document — SkyPilot Air Support Agent ("Aria")</h1>
 
-<p class="meta"><b>Version:</b> 1.1 &nbsp; <b>Last updated:</b> 2026-10-08 &nbsp; <b>Product:</b> SkyPilot Air Customer-Support Virtual Assistant ("Aria") &nbsp; <b>Audience:</b> Agent-to-Agent test generator (TestMu AI) and the LLM benchmark team &nbsp; <b>Agent under test (endpoint):</b> <code>https://skypilot-aria.vercel.app/a2a</code> (A2A chat contract, see Appendix B; requests carry header <code>x-api-key</code>). Chat site: <code>https://skypilot-aria.vercel.app/</code>.</p>
+<p class="meta"><b>Version:</b> 1.1 &nbsp; <b>Last updated:</b> 2026-10-08 &nbsp; <b>Product:</b> SkyPilot Air Customer-Support Virtual Assistant ("Aria") &nbsp; <b>Audience:</b> Agent-to-Agent test generator (TestMu AI) and the LLM benchmark team &nbsp; <b>Agent under test (endpoint):</b> <code>https://skypilot-aria-zeta.vercel.app/a2a</code> (A2A chat contract, see Appendix B; requests carry header <code>x-api-key</code>). Chat site: <code>https://skypilot-aria-zeta.vercel.app/</code>.</p>
 
 <div class="callout">
 <p><b>Purpose of this document.</b> It defines what Aria is expected to do and <i>not</i> do, the business rules it must follow, the verification and security behaviour it must enforce, and concrete test data. Use it to generate functional, conversational and adversarial (red-team) test scenarios and to score responses. The document describes Aria's required behaviour only; which language model powers Aria is a configuration of the test harness, not of this specification. Aria is a demo application backed by <b>synthetic data</b>; every customer, booking, flight and ticket below is fictional.</p>
@@ -333,7 +333,7 @@ a{color:var(--accent)}
 <h2>Appendix B — Notes for the test harness</h2>
 
 <h3>B.1 Endpoint contract (TestMu)</h3>
-<pre><code>POST https://skypilot-aria.vercel.app/a2a
+<pre><code>POST https://skypilot-aria-zeta.vercel.app/a2a
 Headers: Content-Type: application/json
          x-api-key: &lt;agent key&gt;          (required on the hosted agent)
          x-guardrails: off | strict      (optional; default strict)
@@ -359,7 +359,7 @@ Response path for the reply: reply   (also available as output[0].content)</code
 </ul>
 
 <h3>B.2 Evidence endpoints (for TestMu Data Validation and local scoring)</h3>
-<pre><code>All with header x-api-key, base https://skypilot-aria.vercel.app
+<pre><code>All with header x-api-key, base https://skypilot-aria-zeta.vercel.app
 GET  /api/sessions/{session_id}/trace                      all turns, tool calls, policy refs, outbox (SMS/email), hand-offs, usage
 GET  /api/sessions/{session_id}/db/bookings?pnr=55AG9K     data state after the conversation
 GET  /api/sessions/{session_id}/db/refunds?pnr=SBEXP6
@@ -439,7 +439,7 @@ POST /api/pay/{session_id}/{link_id}                       simulate the customer
 <tr><td>Hand-off thresholds</td><td>Refund or compensation &gt; ₹1,00,000 · groups ≥ 10 · international compensation · medical, legal, fraud review</td></tr>
 </table>
 
-<p class="small">Source of truth for every rule and string: <code>prompts/v1/policies/*.md</code> (rules), <code>tools/fare_rules.json</code> (numbers), <code>tools/rules.py</code> (engine), <code>data/ground_truth.json</code> (expected outcomes). This document is served by the agent at <code>https://skypilot-aria.vercel.app/brd.html</code>.</p>
+<p class="small">Source of truth for every rule and string: <code>prompts/v1/policies/*.md</code> (rules), <code>tools/fare_rules.json</code> (numbers), <code>tools/rules.py</code> (engine), <code>data/ground_truth.json</code> (expected outcomes). This document is served by the agent at <code>https://skypilot-aria-zeta.vercel.app/brd.html</code>.</p>
 
 </main>
 </body>
